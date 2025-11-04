@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aqronix Host | Reliable VPS & Dedicated Servers</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f111a;
-      color: #e0e0e0;
+    /* Dark Mode Colors */
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background-color: #0f111a; 
+      color: #e0e0e0; 
     }
 
     .logo-circle {
@@ -21,66 +22,55 @@
       color: white; font-weight: 700; font-size: 20px;
     }
 
+    .hero-bg {
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.2), transparent 60%);
+    }
+
+    /* Navbar */
     header {
       border-bottom: 1px solid #2c2f41;
     }
-
     nav a {
       color: #cfd5f1;
-      font-weight: 500;
       transition: 0.3s;
     }
-
     nav a:hover {
       color: #3b82f6;
     }
 
+    /* Buttons */
     .btn-primary {
-      background: #3b82f6;
-      color: #fff;
+      background-color: #3b82f6;
+      color: white;
       padding: 0.65rem 1.2rem;
       border-radius: 10px;
       font-weight: 600;
       transition: 0.3s;
     }
-
     .btn-primary:hover {
-      background: #2563eb;
+      background-color: #2563eb;
     }
 
-    .hero-section {
-      background: radial-gradient(circle at top left, rgba(59,130,246,0.2), transparent 70%);
-    }
-
+    /* Features */
     .feature-card {
       background-color: #1b1e2b;
       border-radius: 12px;
       padding: 1.8rem;
       transition: 0.3s;
     }
-
     .feature-card:hover {
       background-color: #272c42;
       transform: translateY(-4px);
     }
 
+    /* Footer */
     footer {
       border-top: 1px solid #2c2f41;
       color: #9ca3af;
     }
-
-    .lang-icon {
-      cursor: pointer;
-      font-size: 18px;
-      color: #cfd5f1;
-      transition: 0.3s;
-    }
-    .lang-icon:hover {
-      color: #3b82f6;
-    }
   </style>
 </head>
-<body>
+<body class="hero-bg">
 
   <!-- Navbar -->
   <header class="flex justify-between items-center px-6 py-4">
@@ -89,30 +79,29 @@
       <h1 class="text-xl font-semibold text-blue-400">AqronixHost</h1>
     </div>
     <nav class="space-x-6 hidden md:flex">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Pricing</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="index.html" class="hover:text-blue-400">Home</a>
+      <a href="services.html" class="hover:text-blue-400">Services</a>
+      <a href="pricing.html" class="hover:text-blue-400">Pricing</a>
+      <a href="about.html" class="hover:text-blue-400">About</a>
+      <a href="contact.html" class="hover:text-blue-400">Contact</a>
     </nav>
-    <div class="flex items-center space-x-3">
-      <!-- Language Icon -->
-      <span class="lang-icon" onclick="toggleLanguage()">🌐</span>
+    <div class="space-x-3 flex items-center">
+      <a href="index-ar.html" class="text-sm text-gray-400 hover:text-blue-400">العربية</a>
       <a href="https://wa.me/201028085788" target="_blank" class="btn-primary">WhatsApp</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-section text-center py-24 px-6">
+  <section class="text-center py-20 px-6">
     <h2 class="text-4xl md:text-5xl font-bold mb-4 text-blue-400">Reliable Hosting for Your Digital World</h2>
     <p class="max-w-2xl mx-auto text-gray-400 mb-8">
       AqronixHost provides high-performance VPS, dedicated servers, and GPU hosting solutions — optimized for speed, security, and reliability.
     </p>
-    <a href="#" class="btn-primary">View Plans</a>
+    <a href="pricing.html" class="btn-primary">View Plans</a>
   </section>
 
   <!-- Features -->
-  <section class="grid md:grid-cols-3 gap-8 px-8 py-16">
+  <section class="grid md:grid-cols-3 gap-8 px-8 py-16 border-t border-gray-700">
     <div class="feature-card">
       <h3 class="text-xl font-semibold text-blue-400 mb-2">VPS Hosting</h3>
       <p class="text-gray-400">Fast and scalable VPS solutions with full root access and high uptime guarantees.</p>
@@ -128,22 +117,10 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 text-center text-sm">
+  <footer class="border-t border-gray-700 py-6 text-center text-sm">
     <p>© 2025 AqronixHost. All rights reserved.</p>
     <p class="mt-2">Developed by <span class="text-blue-400">Abdelrahman Reda</span></p>
   </footer>
-
-  <script>
-    function toggleLanguage() {
-      if(document.documentElement.lang === 'en'){
-        document.documentElement.lang = 'ar';
-        alert("تم تغيير اللغة إلى العربية");
-      } else {
-        document.documentElement.lang = 'en';
-        alert("Language switched to English");
-      }
-    }
-  </script>
 
 </body>
 </html>

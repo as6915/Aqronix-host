@@ -1,125 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aqronix Host | Reliable VPS & Dedicated Servers</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Dark Mode Colors */
-    body { 
-      font-family: 'Poppins', sans-serif; 
-      background-color: #0f111a; 
-      color: #e0e0e0; 
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aqronix Host | Modern Dark Theme</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c17;
+    color: #e0e0e0;
+  }
 
-    .logo-circle {
-      background: linear-gradient(135deg, #4f46e5, #3b82f6);
-      border-radius: 9999px;
-      width: 40px; height: 40px;
-      display: flex; align-items: center; justify-content: center;
-      color: white; font-weight: 700; font-size: 20px;
-    }
+  /* Navbar */
+  nav a {
+    color: #cfd5f1;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    color: #3b82f6;
+  }
 
-    .hero-bg {
-      background: radial-gradient(circle at top left, rgba(59,130,246,0.2), transparent 60%);
-    }
+  .logo-circle {
+    width: 50px; height: 50px;
+    border-radius: 9999px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 22px;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: #fff;
+  }
 
-    /* Navbar */
-    header {
-      border-bottom: 1px solid #2c2f41;
-    }
-    nav a {
-      color: #cfd5f1;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #3b82f6;
-    }
+  .btn-primary {
+    background: #3b82f6;
+    color: #fff;
+    padding: 0.75rem 1.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn-primary:hover {
+    background: #2563eb;
+  }
 
-    /* Buttons */
-    .btn-primary {
-      background-color: #3b82f6;
-      color: white;
-      padding: 0.65rem 1.2rem;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .btn-primary:hover {
-      background-color: #2563eb;
-    }
+  /* Hero */
+  .hero-section {
+    background: radial-gradient(circle at top left, rgba(59,130,246,0.15), transparent 70%);
+    padding: 6rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+  }
+  .hero-section p {
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    /* Features */
-    .feature-card {
-      background-color: #1b1e2b;
-      border-radius: 12px;
-      padding: 1.8rem;
-      transition: 0.3s;
-    }
-    .feature-card:hover {
-      background-color: #272c42;
-      transform: translateY(-4px);
-    }
+  /* Features */
+  .feature-card {
+    background-color: #1c1f2d;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(59,130,246,0.3);
+  }
+  .feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+  }
+  .feature-card p {
+    color: #a1a1aa;
+  }
 
-    /* Footer */
-    footer {
-      border-top: 1px solid #2c2f41;
-      color: #9ca3af;
-    }
-  </style>
+  /* Footer */
+  footer {
+    background-color: #0a0b14;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #6b7280;
+  }
+
+  footer span {
+    color: #3b82f6;
+    font-weight: 600;
+  }
+</style>
 </head>
-<body class="hero-bg">
+<body>
 
   <!-- Navbar -->
-  <header class="flex justify-between items-center px-6 py-4">
-    <div class="flex items-center space-x-3">
+  <header class="flex flex-col md:flex-row justify-between items-center px-6 py-4 md:px-12 md:py-6 border-b border-gray-700">
+    <div class="flex items-center space-x-3 mb-4 md:mb-0">
       <div class="logo-circle">A</div>
-      <h1 class="text-xl font-semibold text-blue-400">AqronixHost</h1>
+      <h1 class="text-2xl font-semibold text-blue-400">AqronixHost</h1>
     </div>
-    <nav class="space-x-6 hidden md:flex">
-      <a href="index.html" class="hover:text-blue-400">Home</a>
-      <a href="services.html" class="hover:text-blue-400">Services</a>
-      <a href="pricing.html" class="hover:text-blue-400">Pricing</a>
-      <a href="about.html" class="hover:text-blue-400">About</a>
-      <a href="contact.html" class="hover:text-blue-400">Contact</a>
+    <nav class="flex space-x-6 mb-4 md:mb-0">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Pricing</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
-    <div class="space-x-3 flex items-center">
-      <a href="index-ar.html" class="text-sm text-gray-400 hover:text-blue-400">العربية</a>
+    <div class="flex space-x-3">
+      <a href="index-ar.html" class="text-gray-400 hover:text-blue-400 text-xl">🌐</a>
       <a href="https://wa.me/201028085788" target="_blank" class="btn-primary">WhatsApp</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="text-center py-20 px-6">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-blue-400">Reliable Hosting for Your Digital World</h2>
-    <p class="max-w-2xl mx-auto text-gray-400 mb-8">
+  <section class="hero-section">
+    <h1>Reliable Hosting for Your Digital World</h1>
+    <p>
       AqronixHost provides high-performance VPS, dedicated servers, and GPU hosting solutions — optimized for speed, security, and reliability.
     </p>
-    <a href="pricing.html" class="btn-primary">View Plans</a>
+    <a href="#" class="btn-primary">View Plans</a>
   </section>
 
   <!-- Features -->
-  <section class="grid md:grid-cols-3 gap-8 px-8 py-16 border-t border-gray-700">
+  <section class="grid md:grid-cols-3 gap-8 px-6 md:px-12 py-16 max-w-6xl mx-auto">
     <div class="feature-card">
-      <h3 class="text-xl font-semibold text-blue-400 mb-2">VPS Hosting</h3>
-      <p class="text-gray-400">Fast and scalable VPS solutions with full root access and high uptime guarantees.</p>
+      <h3>VPS Hosting</h3>
+      <p>Fast and scalable VPS solutions with full root access and high uptime guarantees.</p>
     </div>
     <div class="feature-card">
-      <h3 class="text-xl font-semibold text-blue-400 mb-2">Dedicated Servers</h3>
-      <p class="text-gray-400">Enterprise-grade hardware designed for maximum performance and reliability.</p>
+      <h3>Dedicated Servers</h3>
+      <p>Enterprise-grade hardware designed for maximum performance and reliability.</p>
     </div>
     <div class="feature-card">
-      <h3 class="text-xl font-semibold text-blue-400 mb-2">GPU Hosting</h3>
-      <p class="text-gray-400">Powerful GPU instances for AI, machine learning, and rendering workloads.</p>
+      <h3>GPU Hosting</h3>
+      <p>Powerful GPU instances for AI, machine learning, and rendering workloads.</p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-700 py-6 text-center text-sm">
+  <footer>
     <p>© 2025 AqronixHost. All rights reserved.</p>
-    <p class="mt-2">Developed by <span class="text-blue-400">Abdelrahman Reda</span></p>
+    <p>Developed by <span>Abdelrahman Reda</span></p>
   </footer>
 
 </body>

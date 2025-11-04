@@ -38,7 +38,7 @@
     .btn-primary {
       background: #3b82f6;
       color: #fff;
-      padding: 0.75rem 1.5rem;
+      padding: 0.65rem 1.2rem;
       border-radius: 10px;
       font-weight: 600;
       transition: 0.3s;
@@ -68,6 +68,16 @@
       border-top: 1px solid #2c2f41;
       color: #9ca3af;
     }
+
+    .lang-icon {
+      cursor: pointer;
+      font-size: 18px;
+      color: #cfd5f1;
+      transition: 0.3s;
+    }
+    .lang-icon:hover {
+      color: #3b82f6;
+    }
   </style>
 </head>
 <body>
@@ -85,9 +95,10 @@
       <a href="#">About</a>
       <a href="#">Contact</a>
     </nav>
-    <div class="space-x-3 flex items-center">
-      <a href="#" class="text-sm text-gray-400 hover:text-blue-400">العربية</a>
-      <a href="#" class="btn-primary">WhatsApp</a>
+    <div class="flex items-center space-x-3">
+      <!-- Language Icon -->
+      <span class="lang-icon" onclick="toggleLanguage()">🌐</span>
+      <a href="https://wa.me/201028085788" target="_blank" class="btn-primary">WhatsApp</a>
     </div>
   </header>
 
@@ -121,6 +132,18 @@
     <p>© 2025 AqronixHost. All rights reserved.</p>
     <p class="mt-2">Developed by <span class="text-blue-400">Abdelrahman Reda</span></p>
   </footer>
+
+  <script>
+    function toggleLanguage() {
+      if(document.documentElement.lang === 'en'){
+        document.documentElement.lang = 'ar';
+        alert("تم تغيير اللغة إلى العربية");
+      } else {
+        document.documentElement.lang = 'en';
+        alert("Language switched to English");
+      }
+    }
+  </script>
 
 </body>
 </html>

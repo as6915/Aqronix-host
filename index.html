@@ -6,6 +6,8 @@
 <title>Aqronix Host | Modern Dark Theme</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- Include Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <style>
   body {
     font-family: 'Poppins', sans-serif;
@@ -95,11 +97,38 @@
     padding: 2rem 1rem;
     text-align: center;
     color: #6b7280;
+    position: relative;
   }
 
   footer span {
     color: #3b82f6;
     font-weight: 600;
+  }
+
+  /* Icons */
+  .icon-btn {
+    color: #cfd5f1;
+    font-size: 1.5rem;
+    margin-left: 0.75rem;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .icon-btn:hover {
+    color: #3b82f6;
+  }
+
+  /* WhatsApp fixed icon */
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2.2rem;
+    color: #25D366;
+    z-index: 1000;
+    transition: 0.3s;
+  }
+  .whatsapp-icon:hover {
+    transform: scale(1.1);
   }
 </style>
 </head>
@@ -118,9 +147,9 @@
       <a href="#">About</a>
       <a href="#">Contact</a>
     </nav>
-    <div class="flex space-x-3">
-      <a href="index-ar.html" class="text-gray-400 hover:text-blue-400 text-xl">🌐</a>
-      <a href="https://wa.me/201028085788" target="_blank" class="btn-primary">WhatsApp</a>
+    <div class="flex items-center">
+      <!-- Language Icon -->
+      <i class="fas fa-globe icon-btn" onclick="toggleLanguage()" title="Change Language"></i>
     </div>
   </header>
 
@@ -154,6 +183,23 @@
     <p>© 2025 AqronixHost. All rights reserved.</p>
     <p>Developed by <span>Abdelrahman Reda</span></p>
   </footer>
+
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/201028085788" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+  </a>
+
+  <script>
+    function toggleLanguage() {
+      if(document.documentElement.lang === 'en'){
+        document.documentElement.lang = 'ar';
+        alert("تم تغيير اللغة إلى العربية");
+      } else {
+        document.documentElement.lang = 'en';
+        alert("Language switched to English");
+      }
+    }
+  </script>
 
 </body>
 </html>

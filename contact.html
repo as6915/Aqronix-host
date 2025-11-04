@@ -4,19 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Aqronix Host</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Font: JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
-    body { font-family: 'Poppins', sans-serif; background-color: #0a0a0f; color: #e5e7eb; }
+    body { 
+      font-family: 'JetBrains Mono', monospace; 
+      background-color: #0a0a0f; 
+      color: #e5e7eb; 
+    }
     .logo-circle {
       background: linear-gradient(135deg, #2563eb, #38bdf8);
       border-radius: 9999px;
       width: 40px; height: 40px;
       display: flex; align-items: center; justify-content: center;
       color: white; font-weight: 700; font-size: 20px;
+      animation: bounceLogo 2s infinite;
     }
-    input, textarea { background-color: #1f1f2f; color: #e5e7eb; border: 1px solid #3f3f4f; border-radius: 0.5rem; padding: 0.5rem; width: 100%; }
-    input:focus, textarea:focus { outline: none; border-color: #2563eb; }
+    input, textarea { 
+      background-color: #1f1f2f; 
+      color: #e5e7eb; 
+      border: 1px solid #3f3f4f; 
+      border-radius: 0.5rem; 
+      padding: 0.5rem; 
+      width: 100%; 
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    input:focus, textarea:focus { 
+      outline: none; 
+      border-color: #2563eb; 
+      transform: scale(1.02);
+    }
+    button { transition: transform 0.2s; }
+    button:hover { transform: scale(1.05); }
+
+    nav a { transition: 0.3s; }
+    nav a:hover { color: #3b82f6; }
+
+    /* WhatsApp icon */
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 2.2rem;
+      color: #25D366;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+    .whatsapp-icon:hover { transform: scale(1.2) rotate(-10deg); }
+
+    /* Animations */
+    @keyframes bounceLogo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
   </style>
 </head>
 <body>
@@ -34,9 +79,8 @@
       <a href="about.html" class="hover:text-blue-400">About</a>
       <a href="contact.html" class="text-blue-400">Contact</a>
     </nav>
-    <div class="space-x-3 flex items-center">
+    <div class="flex items-center space-x-3">
       <a href="contact-ar.html" class="text-sm text-gray-400 hover:text-blue-400">Ar</a>
-      <a href="https://wa.me/201028085788" target="_blank" class="bg-blue-600 px-3 py-1 rounded-lg text-white hover:bg-blue-700">WhatsApp</a>
     </div>
   </header>
 
@@ -75,6 +119,11 @@
     <p>© 2025 AqronixHost. All rights reserved.</p>
     <p class="mt-2">Developed by <span class="text-blue-400">Abdelrahman Reda</span></p>
   </footer>
+
+  <!-- WhatsApp icon -->
+  <a href="https://wa.me/201028085788" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>

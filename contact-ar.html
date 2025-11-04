@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>تواصل معنا | Aqronix Host</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Font: JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body { font-family: 'Cairo', sans-serif; background-color: #0a0a0f; color: #e5e7eb; direction: rtl; }
+    body { font-family: 'JetBrains Mono', monospace; background-color: #0a0a0f; color: #e5e7eb; direction: rtl; }
     .logo-circle {
       background: linear-gradient(135deg, #2563eb, #38bdf8);
       border-radius: 9999px;
@@ -17,6 +19,17 @@
     }
     input, textarea { background-color: #1f1f2f; color: #e5e7eb; border: 1px solid #3f3f4f; border-radius: 0.5rem; padding: 0.5rem; width: 100%; }
     input:focus, textarea:focus { outline: none; border-color: #2563eb; }
+
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      font-size: 2.2rem;
+      color: #25D366;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+    .whatsapp-icon:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
@@ -34,9 +47,8 @@
       <a href="about-ar.html" class="hover:text-blue-400">من نحن</a>
       <a href="contact-ar.html" class="text-blue-400">تواصل معنا</a>
     </nav>
-    <div class="space-x-3 flex items-center space-x-reverse">
+    <div class="flex items-center space-x-3 space-x-reverse">
       <a href="contact.html" class="text-sm text-gray-400 hover:text-blue-400">English</a>
-      <a href="https://wa.me/201028085788" target="_blank" class="bg-blue-600 px-3 py-1 rounded-lg text-white hover:bg-blue-700">واتساب</a>
     </div>
   </header>
 
@@ -55,7 +67,7 @@
       </div>
       <div>
         <label class="block mb-1" for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="email" placeholder="bgvhccc@gmail.com" required>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
       </div>
       <div>
         <label class="block mb-1" for="message">رسالتك</label>
@@ -63,11 +75,6 @@
       </div>
       <button type="submit" class="bg-blue-600 px-6 py-2 rounded-lg text-white hover:bg-blue-700 transition">إرسال الرسالة</button>
     </form>
-
-    <div class="text-center mt-8 text-gray-400">
-      <p>أو تواصل معنا مباشرة عبر واتساب:</p>
-      <a href="https://wa.me/201028085788" target="_blank" class="text-blue-400 hover:underline">+201028085788</a>
-    </div>
   </section>
 
   <!-- الفوتر -->
@@ -75,6 +82,11 @@
     <p>© 2025 AqronixHost. جميع الحقوق محفوظة.</p>
     <p class="mt-2">تم التطوير بواسطة <span class="text-blue-400">Abdelrahman Reda</span></p>
   </footer>
+
+  <!-- أيقونة WhatsApp أسفل الصفحة -->
+  <a href="https://wa.me/201028085788" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>

@@ -1,13 +1,16 @@
-here<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>من نحن | Aqronix Host</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Font: JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body { font-family: 'Cairo', sans-serif; background-color: #0a0a0f; color: #e5e7eb; direction: rtl; }
+    body { font-family: 'JetBrains Mono', monospace; background-color: #0a0a0f; color: #e5e7eb; direction: rtl; }
+
     .logo-circle {
       background: linear-gradient(135deg, #2563eb, #38bdf8);
       border-radius: 9999px;
@@ -15,6 +18,29 @@ here<!DOCTYPE html>
       display: flex; align-items: center; justify-content: center;
       color: white; font-weight: 700; font-size: 20px;
     }
+
+    nav a { transition: 0.3s; }
+    nav a:hover { color: #3b82f6; }
+
+    .icon-btn {
+      color: #cfd5f1;
+      font-size: 1.5rem;
+      margin-left: 0.75rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .icon-btn:hover { color: #3b82f6; }
+
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      left: 20px; /* Left because RTL */
+      font-size: 2.2rem;
+      color: #25D366;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+    .whatsapp-icon:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
@@ -32,27 +58,35 @@ here<!DOCTYPE html>
       <a href="about-ar.html" class="text-blue-400">من نحن</a>
       <a href="contact-ar.html" class="hover:text-blue-400">تواصل معنا</a>
     </nav>
-    <div class="space-x-3 flex items-center space-x-reverse">
-      <a href="about.html" class="text-sm text-gray-400 hover:text-blue-400">English</a>
-      <a href="https://wa.me/201028085788" target="_blank" class="bg-blue-600 px-3 py-1 rounded-lg text-white hover:bg-blue-700">واتساب</a>
+    <div class="flex items-center">
+      <!-- Language Icon -->
+      <a href="about.html" class="icon-btn" title="Switch to English">
+        <i class="fas fa-globe"></i>
+      </a>
     </div>
   </header>
 
   <!-- العنوان -->
   <section class="text-center py-16 px-6">
     <h2 class="text-4xl font-bold text-blue-400 mb-4">من نحن</h2>
-    <p class="max-w-3xl mx-auto text-gray-400">نحن مزود استضافة مستقل أسسه مطورون لخدمة المطورين والأعمال التي تبحث عن أداء وثبات. هدفنا جعل تقنيات السيرفرات المتقدمة متاحة للجميع في العالم العربي وخارجه.</p>
+    <p class="max-w-3xl mx-auto text-gray-400">
+      نحن مزود استضافة مستقل أسسه مطورون لخدمة المطورين والأعمال التي تبحث عن أداء وثبات. هدفنا جعل تقنيات السيرفرات المتقدمة متاحة للجميع في العالم العربي وخارجه.
+    </p>
   </section>
 
   <!-- الرؤية والرسالة -->
   <section class="grid md:grid-cols-2 gap-10 px-10 pb-16 text-right">
     <div>
       <h3 class="text-2xl font-semibold text-blue-400 mb-3">رسالتنا</h3>
-      <p class="text-gray-400">تهدف AqronixHost إلى تمكين الأفراد والشركات عبر تقديم خوادم VPS وGPU وخوادم مخصصة بمواصفات عالية ودعم فني على مدار الساعة وبأسعار شفافة تناسب المستخدم العربي.</p>
+      <p class="text-gray-400">
+        تهدف AqronixHost إلى تمكين الأفراد والشركات عبر تقديم خوادم VPS وGPU وخوادم مخصصة بمواصفات عالية ودعم فني على مدار الساعة وبأسعار شفافة تناسب المستخدم العربي.
+      </p>
     </div>
     <div>
       <h3 class="text-2xl font-semibold text-blue-400 mb-3">رؤيتنا</h3>
-      <p class="text-gray-400">أن نصبح العلامة العربية الرائدة في مجال الاستضافة، والمعروفة بالثقة والابتكار والخدمة التقنية المميزة على مستوى الشرق الأوسط وشمال إفريقيا.</p>
+      <p class="text-gray-400">
+        أن نصبح العلامة العربية الرائدة في مجال الاستضافة، والمعروفة بالثقة والابتكار والخدمة التقنية المميزة على مستوى الشرق الأوسط وشمال إفريقيا.
+      </p>
     </div>
   </section>
 
@@ -61,6 +95,11 @@ here<!DOCTYPE html>
     <p>© 2025 AqronixHost. جميع الحقوق محفوظة.</p>
     <p class="mt-2">تم التطوير بواسطة <span class="text-blue-400">Abdelrahman Reda</span></p>
   </footer>
+
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/201028085788" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>

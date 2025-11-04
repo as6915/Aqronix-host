@@ -1,76 +1,188 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aqronix Host | استضافة موثوقة للخوادم و VPS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: 'Cairo', sans-serif; background-color: #0a0a0f; color: #e5e7eb; direction: rtl; }
-    .logo-circle {
-      background: linear-gradient(135deg, #2563eb, #38bdf8);
-      border-radius: 9999px;
-      width: 40px; height: 40px;
-      display: flex; align-items: center; justify-content: center;
-      color: white; font-weight: 700; font-size: 20px;
-    }
-    .hero-bg {
-      background: radial-gradient(circle at top right, rgba(37,99,235,0.3), transparent 60%);
-    }
-  </style>
-</head>
-<body class="hero-bg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكرونيكس هوست | استضافة VPS وخوادم مخصصة</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c17;
+    color: #e0e0e0;
+  }
 
-  <!-- شريط التنقل -->
-  <header class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
-    <div class="flex items-center space-x-3 space-x-reverse">
-      <div class="logo-circle">A</div>
-      <h1 class="text-xl font-semibold text-blue-400">AqronixHost</h1>
+  nav a {
+    color: #cfd5f1;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    color: #3b82f6;
+  }
+
+  .logo-circle {
+    width: 50px; height: 50px;
+    border-radius: 9999px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 22px;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: #fff;
+  }
+
+  .btn-primary {
+    background: #3b82f6;
+    color: #fff;
+    padding: 0.75rem 1.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn-primary:hover {
+    background: #2563eb;
+  }
+
+  .hero-section {
+    background: radial-gradient(circle at top right, rgba(59,130,246,0.15), transparent 70%);
+    padding: 6rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+  }
+  .hero-section p {
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-card {
+    background-color: #1c1f2d;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(59,130,246,0.3);
+  }
+  .feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+  }
+  .feature-card p {
+    color: #a1a1aa;
+  }
+
+  footer {
+    background-color: #0a0b14;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #6b7280;
+    position: relative;
+  }
+
+  footer span {
+    color: #3b82f6;
+    font-weight: 600;
+  }
+
+  .icon-btn {
+    color: #cfd5f1;
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .icon-btn:hover {
+    color: #3b82f6;
+  }
+
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Left because RTL */
+    font-size: 2.2rem;
+    color: #25D366;
+    z-index: 1000;
+    transition: 0.3s;
+  }
+  .whatsapp-icon:hover {
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="flex flex-col md:flex-row justify-between items-center px-6 py-4 md:px-12 md:py-6 border-b border-gray-700">
+    <div class="flex items-center space-x-3 mb-4 md:mb-0">
+      <div class="logo-circle">أ</div>
+      <h1 class="text-2xl font-semibold text-blue-400">أكرونيكس هوست</h1>
     </div>
-    <nav class="space-x-6 space-x-reverse hidden md:flex">
-      <a href="index-ar.html" class="hover:text-blue-400">الرئيسية</a>
-      <a href="services-ar.html" class="hover:text-blue-400">الخدمات</a>
-      <a href="pricing-ar.html" class="hover:text-blue-400">الأسعار</a>
-      <a href="about-ar.html" class="hover:text-blue-400">من نحن</a>
-      <a href="contact-ar.html" class="hover:text-blue-400">تواصل معنا</a>
+    <nav class="flex space-x-6 mb-4 md:mb-0">
+      <a href="index-ar.html">الرئيسية</a>
+      <a href="services-ar.html">خدماتنا</a>
+      <a href="pricing-ar.html">الخطط</a>
+      <a href="about-ar.html">عن الشركة</a>
+      <a href="contact-ar.html">تواصل معنا</a>
     </nav>
-    <div class="space-x-3 flex items-center space-x-reverse">
-      <a href="index.html" class="text-sm text-gray-400 hover:text-blue-400">English</a>
-      <a href="https://wa.me/201028085788" target="_blank" class="bg-blue-600 px-3 py-1 rounded-lg text-white hover:bg-blue-700">واتساب</a>
+    <div class="flex items-center">
+      <!-- Language Icon -->
+      <a href="index.html" class="icon-btn" title="Switch to English">
+        <i class="fas fa-globe"></i>
+      </a>
     </div>
   </header>
 
-  <!-- المقدمة -->
-  <section class="text-center py-20 px-6">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-blue-400">استضافة موثوقة لعالمك الرقمي</h2>
-    <p class="max-w-2xl mx-auto text-gray-400 mb-8">
-      تقدم AqronixHost حلول استضافة VPS وخوادم مخصصة واستضافة GPU عالية الأداء — مصممة للسرعة والأمان والاعتمادية.
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>استضافة موثوقة لعالمك الرقمي</h1>
+    <p>
+      توفر أكرونيكس هوست حلول VPS عالية الأداء، خوادم مخصصة واستضافة GPU — محسنة للسرعة، الأمان والموثوقية.
     </p>
-    <a href="pricing-ar.html" class="bg-blue-600 px-6 py-3 rounded-lg text-white hover:bg-blue-700 transition">عرض الخطط</a>
+    <a href="pricing-ar.html" class="btn-primary">عرض الخطط</a>
   </section>
 
-  <!-- المميزات -->
-  <section class="grid md:grid-cols-3 gap-8 px-8 py-16 border-t border-gray-700 text-right">
-    <div>
-      <h3 class="text-xl font-semibold text-blue-400 mb-2">استضافة VPS</h3>
-      <p class="text-gray-400">حلول VPS سريعة وقابلة للتوسع مع وصول كامل للجذر وضمان وقت تشغيل عالي.</p>
+  <!-- Features -->
+  <section class="grid md:grid-cols-3 gap-8 px-6 md:px-12 py-16 max-w-6xl mx-auto">
+    <div class="feature-card">
+      <h3>استضافة VPS</h3>
+      <p>حلول VPS سريعة وقابلة للتوسع مع وصول كامل للجذر وضمانات uptime عالية.</p>
     </div>
-    <div>
-      <h3 class="text-xl font-semibold text-blue-400 mb-2">الخوادم المخصصة</h3>
-      <p class="text-gray-400">أجهزة احترافية مصممة لتحقيق أقصى أداء واستقرار.</p>
+    <div class="feature-card">
+      <h3>خوادم مخصصة</h3>
+      <p>أجهزة عالية الأداء مصممة لتحقيق أقصى قدر من الموثوقية والكفاءة.</p>
     </div>
-    <div>
-      <h3 class="text-xl font-semibold text-blue-400 mb-2">استضافة GPU</h3>
-      <p class="text-gray-400">استضافة قوية لمعالجة الذكاء الاصطناعي والتعلم الآلي والرندرة.</p>
+    <div class="feature-card">
+      <h3>استضافة GPU</h3>
+      <p>خوادم GPU قوية للذكاء الاصطناعي، التعلم الآلي، وعمليات الرندر.</p>
     </div>
   </section>
 
-  <!-- الفوتر -->
-  <footer class="border-t border-gray-700 py-6 text-center text-gray-500 text-sm">
-    <p>© 2025 AqronixHost. جميع الحقوق محفوظة.</p>
-    <p class="mt-2">تم التطوير بواسطة <span class="text-blue-400">Abdelrahman Reda</span></p>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 أكرونيكس هوست. جميع الحقوق محفوظة.</p>
+    <p>تم التطوير بواسطة <span>عبد الرحمن رضا</span></p>
   </footer>
+
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/201028085788" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>

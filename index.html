@@ -1,56 +1,61 @@
 <!DOCTYPE html><html lang="ar" dir="rtl"><head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aqronix Premium Hosting</title>
+<title>Aqronix Cyber VPS</title>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 <style>
-  body{margin:0;background:#020202;color:#fff;font-family:'Poppins',sans-serif;overflow-x:hidden}
-  header{position:fixed;top:0;left:0;width:100%;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);z-index:999;border-bottom:1px solid #0f0}
-  header h1{font-size:1.8rem;color:#0f0;letter-spacing:2px;text-shadow:0 0 15px #0f0}
-  header nav a{margin:0 15px;color:#bbb;font-size:1rem;text-decoration:none;transition:0.3s}
-  header nav a:hover{color:#0f0}.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:url('https://i.ibb.co/5Kw2m1K/green-grid2.jpg');background-size:cover;background-position:center;position:relative} .hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75)} .hero-content{position:relative;z-index:2;max-width:900px;padding:20px} .hero h1{font-size:4rem;margin-bottom:10px;color:#0f0;text-shadow:0 0 25px #0f0} .hero .tag{font-size:1.4rem;color:#ccc;margin-bottom:25px} .btn{padding:15px 45px;font-size:1.3rem;background:#0f0;color:#000;border:none;border-radius:12px;font-weight:bold;cursor:pointer;box-shadow:0 0 20px #0f0;transition:0.3s} .btn:hover{transform:scale(1.07);box-shadow:0 0 30px #0f0}
+  body{margin:0;background:#020302;color:#fff;font-family:'Poppins',sans-serif;overflow-x:hidden}
+  header{position:fixed;top:0;left:0;width:100%;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.45);backdrop-filter:blur(12px);z-index:999;border-bottom:1px solid #0f0;box-shadow:0 0 25px #002200}
+  header h1{font-size:2rem;color:#0f0;font-weight:700;text-shadow:0 0 18px #00ff00}
+  header nav a{margin:0 20px;color:#ccc;text-decoration:none;font-size:1.1rem;transition:0.3s}
+  header nav a:hover{color:#0f0;text-shadow:0 0 10px #0f0}.hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:url('https://i.ibb.co/sjQBqrz/green-matrix-grid.jpg');background-size:cover;background-position:center;position:relative} .hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7)} .hero-content{position:relative;z-index:2;max-width:800px} .hero h1{font-size:4.5rem;color:#0f0;font-weight:900;text-shadow:0 0 40px #00ff00} .tag{font-size:1.6rem;color:#bbb;margin:20px 0} .btn{padding:18px 50px;background:#0f0;color:#000;border:none;border-radius:12px;font-size:1.4rem;font-weight:bold;cursor:pointer;box-shadow:0 0 22px #00ff00;transition:0.3s} .btn:hover{transform:scale(1.08);box-shadow:0 0 35px #00ff00}
 
-.plans{padding:80px 20px;max-width:1300px;margin:auto} .plans h2{text-align:center;font-size:3rem;margin-bottom:50px;color:#0f0;text-shadow:0 0 20px #0f0} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px} .card{background:#0a0a0a;padding:30px;border-radius:18px;border:1px solid #0f0;box-shadow:0 0 25px #002500;transition:0.3s;position:relative;overflow:hidden} .card:hover{transform:translateY(-10px);box-shadow:0 0 35px #00ff00} .card i{font-size:3.2rem;color:#0f0;margin-bottom:15px} .card h3{font-size:1.8rem;margin-bottom:10px;color:#fff} .price{font-size:1.4rem;color:#0f0;font-weight:bold;margin:10px 0} .usd{color:#aaa;font-size:1.1rem}
+.plans{padding:100px 25px;max-width:1400px;margin:auto} .plans h2{text-align:center;font-size:3.2rem;color:#0f0;margin-bottom:70px;text-shadow:0 0 20px #00ff00} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:40px} .card{background:#030503;border:1px solid #0f0;padding:35px;border-radius:20px;box-shadow:0 0 30px #001a00;transition:0.3s;text-align:center;position:relative;overflow:hidden} .card:hover{transform:translateY(-12px);box-shadow:0 0 45px #00ff00} .card i{font-size:4rem;color:#0f0;margin-bottom:20px;text-shadow:0 0 20px #00ff00} .card h3{font-size:2rem;margin-bottom:10px;color:#fff;font-weight:600} .price{font-size:1.5rem;color:#0f0;margin:10px 0;font-weight:bold} .usd{font-size:1.2rem;color:#aaa;margin-bottom:20px}
 
-.platform{padding:90px 20px;text-align:center;background:#000;border-top:1px solid #0f0;box-shadow:0 0 40px #0f0 inset} .platform h2{font-size:3rem;margin-bottom:20px;color:#0f0;text-shadow:0 0 25px #0f0} .platform p{color:#ddd;font-size:1.3rem;margin-bottom:35px}
+.platform{padding:100px 25px;text-align:center;background:#000;border-top:1px solid #0f0;box-shadow:0 0 60px #00ff00 inset} .platform h2{font-size:3rem;color:#0f0;margin-bottom:20px;text-shadow:0 0 25px #0f0} .platform p{color:#ddd;font-size:1.4rem;margin-bottom:35px}
 
-footer{text-align:center;padding:40px 0;color:#666;margin-top:40px;border-top:1px solid #0f0} </style>
+.contact{padding:100px 25px;text-align:center} .contact h2{color:#0f0;font-size:3rem;text-shadow:0 0 20px #0f0;margin-bottom:20px} .contact p{color:#ccc;font-size:1.3rem;margin-bottom:25px}
+
+footer{text-align:center;padding:40px 0;color:#666;border-top:1px solid #0f0;margin-top:40px} </style>
 
 </head>
 <body>
 <header>
-  <h1>Aqronix Host</h1>
+  <h1>Aqronix</h1>
   <nav>
     <a href="#plans">الخطط</a>
     <a href="#platform">المنصة</a>
-    <a href="https://wa.me/+201028085788" target="_blank">تواصل معنا</a>
+    <a href="#contact">تواصل</a>
   </nav>
 </header><div class="hero">
   <div class="hero-content">
-    <h1>Aqronix VPS</h1>
-    <div class="tag">استضافة عالمية وخوادم فاخرة بجودة شركات ضخمة</div>
+    <h1>Aqronix Cyber VPS</h1>
+    <div class="tag">خوادم نيونية فاخرة أداء شركات عالمية</div>
     <button class="btn" onclick="scrollToPlans()">عرض الخطط</button>
   </div>
 </div><section class="plans" id="plans">
-  <h2>خطط VPS الاحترافية</h2>
+  <h2>خطط VPS الفاخرة</h2>
   <div class="grid" id="plansContainer"></div>
 </section><section class="platform" id="platform">
-  <h2>عايز منصه زي دي؟</h2>
-  <p>شوف منصتي الاحترافيه وشوف الشغل الاصلي</p>
-  <a href="https://dash.aqronix-host.site/login" target="_blank">
-    <button class="btn">عرض المنصة</button>
-  </a>
+  <h2>منصة Aqronix الأصلية</h2>
+  <p>لو عايز منصة قوية بنفس الستايل شوف شغلنا الحقيقي</p>
+  <a href="https://dash.aqronix-host.site/login" target="_blank"><button class="btn">عرض المنصة</button></a>
+</section><section class="contact" id="contact">
+  <h2>تواصل معنا</h2>
+  <p>واتساب جاهز لأي طلب أو استفسار</p>
+  <a href="https://wa.me/+201028085788" target="_blank"><button class="btn">راسلنا الآن</button></a>
 </section><footer>© 2025 Aqronix. All Rights Reserved.</footer><script>
   const plans = [
-    { icon:"ri-database-2-line", ram:"2GB RAM", egp:50, usd:1.55 },
-    { icon:"ri-database-line", ram:"4GB RAM", egp:90, usd:2.75 },
-    { icon:"ri-database-2-fill", ram:"6GB RAM", egp:130, usd:3.95 },
-    { icon:"ri-server-line", ram:"8GB RAM", egp:160, usd:4.85 },
-    { icon:"ri-server-fill", ram:"16GB RAM", egp:300, usd:8.05 },
-    { icon:"ri-hard-drive-3-line", ram:"32GB RAM", egp:400, usd:10.55 }
+    { icon:"ri-cpu-line", ram:"2GB RAM", egp:50, usd:1.55 },
+    { icon:"ri-cpu-fill", ram:"4GB RAM", egp:90, usd:2.75 },
+    { icon:"ri-server-line", ram:"6GB RAM", egp:130, usd:3.95 },
+    { icon:"ri-server-fill", ram:"8GB RAM", egp:160, usd:4.85 },
+    { icon:"ri-database-2-line", ram:"16GB RAM", egp:300, usd:8.05 },
+    { icon:"ri-database-2-fill", ram:"32GB RAM", egp:400, usd:10.55 }
   ];
 
   const container = document.getElementById("plansContainer");
+
   plans.forEach(p => {
     const card = document.createElement("div");
     card.className = "card";
@@ -59,15 +64,11 @@ footer{text-align:center;padding:40px 0;color:#666;margin-top:40px;border-top:1p
       <h3>${p.ram}</h3>
       <div class="price">${p.egp} EGP / شهر</div>
       <div class="usd">≈ ${p.usd}$</div>
-      <a href="https://wa.me/+201028085788" target="_blank">
-        <button class="btn" style="margin-top:15px;">اطلب الآن</button>
-      </a>
+      <a href="https://wa.me/+201028085788" target="_blank"><button class="btn">اطلب الآن</button></a>
     `;
     container.appendChild(card);
   });
 
-  function scrollToPlans(){
-    document.getElementById("plans").scrollIntoView({ behavior:"smooth" });
-  }
+  function scrollToPlans(){document.getElementById("plans").scrollIntoView({behavior:"smooth"})}
 </script></body>
 </html>

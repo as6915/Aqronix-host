@@ -1,56 +1,495 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aqronix VPS</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aqronix — استضافة & سيرفرات سحابية </title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
-  body { margin:0; background:#050505; color:#fff; font-family:Arial, sans-serif; }
-  .hero { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:radial-gradient(circle at center, #0f0 0%, #000 70%); }
-  h1 { font-size:4rem; letter-spacing:3px; text-shadow:0 0 20px #0f0; }
-  .tag { font-size:1.2rem; margin-top:10px; color:#cfcfcf; }
-  .btn { margin-top:25px; padding:12px 30px; background:#0f0; color:#000; font-weight:bold; border:none; border-radius:8px; cursor:pointer; font-size:1.1rem; box-shadow:0 0 15px #0f0; }
-  .plans { padding:60px 20px; max-width:1100px; margin:auto; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
-  .card { background:#111; padding:25px; border-radius:12px; border:1px solid #0f0; box-shadow:0 0 20px #040; transition:0.3s; text-align:center; }
-  .card:hover{ transform:scale(1.06); box-shadow:0 0 30px #0f0; }
-  .price{ font-size:1.3rem; margin:10px 0; }
-  footer{ text-align:center; padding:40px 0; color:#555; }
+  :root{
+    --bg:#050505;
+    --card:#0b0b0b;
+    --accent:#00ff6a;
+    --muted:#9aa09a;
+    --glass: rgba(255,255,255,0.04);
+    --glass-2: rgba(255,255,255,0.02);
+    --glass-border: rgba(0,255,106,0.08);
+    --gold: linear-gradient(90deg,#ffd166,#ff6b6b);
+  }
+
+  /* Reset */
+  *{box-sizing:border-box; margin:0; padding:0; -webkit-font-smoothing:antialiased}
+  html,body{height:100%}
+  body{
+    font-family:"Cairo", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(0,255,106,0.04), transparent 6%),
+                radial-gradient(1000px 500px at 90% 90%, rgba(0,200,255,0.03), transparent 6%),
+                var(--bg);
+    color:#e9f8ee;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.35;
+    direction:rtl;
+  }
+
+  /* Layout */
+  .container{max-width:1200px; margin:0 auto; padding:28px;}
+  header{position:fixed; inset:16px 24px auto auto; z-index:50}
+  .brand{
+    display:flex; gap:14px; align-items:center; background:linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+    padding:10px 16px; border-radius:14px; border:1px solid var(--glass-border); backdrop-filter: blur(6px);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+  }
+  .logo-mark{
+    width:44px; height:44px; border-radius:10px; display:grid; place-items:center; font-weight:800;
+    background:linear-gradient(135deg,#00ff6a 0%, #20e3ff 100%);
+    color:#051009; font-family:"Poppins"; box-shadow:0 6px 18px rgba(0,255,106,0.06), inset 0 -6px 12px rgba(255,255,255,0.06)
+  }
+  .brand h1{font-size:1.05rem; letter-spacing:0.6px}
+  .brand p{font-size:12px; color:var(--muted); margin-top:2px}
+
+  /* Hero */
+  .hero{
+    min-height:92vh; display:flex; align-items:center; padding-top:72px; padding-bottom:40px;
+    position:relative; overflow:visible;
+  }
+  .hero-grid{display:grid; grid-template-columns: 1fr 420px; gap:36px; align-items:center}
+  @media (max-width:980px){ .hero-grid{grid-template-columns:1fr; padding:20px} .hero {padding-top:120px} header{position:static;margin-bottom:8px} }
+
+  .panel{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    padding:34px; border-radius:18px; border:1px solid var(--glass-border);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-title{
+    font-size:2.6rem; line-height:1.02; font-weight:800; letter-spacing:0.8px;
+    text-shadow: 0 6px 40px rgba(0,255,106,0.06), 0 2px 8px rgba(0,0,0,0.7);
+    background: linear-gradient(90deg,#e7ffef 0%, #b6ffd8 60%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero-sub{ color:var(--muted); margin-top:12px; font-size:1.05rem; max-width:70%}
+  @media (max-width:980px){ .hero-sub{max-width:100%} .hero-title{font-size:2rem} }
+
+  /* Feature badges */
+  .badges{display:flex; gap:12px; margin-top:22px; flex-wrap:wrap}
+  .badge{
+    padding:8px 12px; background:var(--glass); border-radius:999px; font-weight:600; color:var(--accent);
+    border:1px solid rgba(0,255,106,0.06); font-size:0.9rem;
+  }
+
+  /* Right panel — mock server card */
+  .server-card{
+    background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(255,255,255,0.02));
+    padding:18px; border-radius:16px; border:1px solid rgba(255,255,255,0.03);
+  }
+  .server-top{display:flex; justify-content:space-between; align-items:center}
+  .server-name{font-weight:700}
+  .status{font-size:0.85rem; color:var(--muted)}
+  .specs{display:flex; gap:10px; margin-top:12px; flex-wrap:wrap}
+  .spec{background:var(--glass-2); padding:8px 10px; border-radius:10px; font-size:0.9rem; color:var(--muted); border:1px solid rgba(255,255,255,0.02)}
+
+  /* Plans */
+  .plans { margin-top:46px; display:grid; gap:18px }
+  .controls{display:flex; gap:12px; align-items:center; justify-content:flex-start; flex-wrap:wrap}
+  .toggle{
+    display:inline-flex; border-radius:999px; padding:6px; background:var(--glass-2); border:1px solid rgba(255,255,255,0.02)
+  }
+  .toggle button{ background:transparent; border:0; padding:10px 14px; border-radius:999px; cursor:pointer; font-weight:700; color:var(--muted) }
+  .toggle button.active{ background:linear-gradient(90deg, rgba(0,255,106,0.09), rgba(255,255,255,0.02)); color:var(--accent) }
+
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:12px }
+  @media (max-width:1100px){ .grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:720px){ .grid{grid-template-columns:1fr} .server-card{margin-top:8px} }
+
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    border-radius:14px; padding:20px; border:1px solid rgba(255,255,255,0.03);
+    transition:transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s; position:relative; overflow:hidden;
+  }
+  .card::after{
+    content:""; position:absolute; inset:0; background:linear-gradient(120deg, transparent 0%, rgba(0,255,106,0.02) 10%, transparent 20%); mix-blend-mode:overlay; pointer-events:none;
+  }
+  .card:hover{ transform: translateY(-10px) scale(1.02); box-shadow: 0 40px 90px rgba(0,255,106,0.04) }
+
+  .card h3{ font-size:1.2rem; color:var(--accent); margin-bottom:8px; font-weight:800 }
+  .card .price{ font-size:1.6rem; font-weight:800; margin:8px 0; color:#eafff0 }
+  .card .sub{ color:var(--muted); font-size:0.92rem; margin-bottom:12px }
+  .card ul{ list-style:none; text-align:right; margin-bottom:12px }
+  .card li{ margin:6px 0; color:var(--muted); font-size:0.95rem }
+
+  .cta-row{ display:flex; gap:10px; justify-content:center; margin-top:8px; flex-wrap:wrap }
+  .btn{
+    border:0; padding:10px 16px; border-radius:12px; cursor:pointer; font-weight:800; letter-spacing:0.3px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+  .btn-primary{
+    background: linear-gradient(90deg,#00ff6a 0%, #00d0ff 100%); color:#03110a;
+  }
+  .btn-ghost{
+    background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--muted)
+  }
+
+  /* Ribbon */
+  .ribbon{ position:absolute; left:18px; top:18px; background:linear-gradient(90deg,#ffd166,#ff6b6b); color:#051009; padding:6px 10px; border-radius:8px; font-weight:700; font-size:0.86rem }
+
+  /* Comparison table */
+  .compare{ margin-top:18px; overflow:auto; border-radius:12px; border:1px solid rgba(255,255,255,0.03) }
+  table{ width:100%; border-collapse:collapse; min-width:720px }
+  th,td{ padding:14px 18px; text-align:center; font-size:0.95rem; border-bottom:1px solid rgba(255,255,255,0.02) }
+  th{ background:linear-gradient(180deg, rgba(0,0,0,0.03), transparent); font-weight:700; color:var(--muted) }
+
+  /* Footer */
+  footer{ margin-top:36px; padding:28px; text-align:center; color:var(--muted); font-size:0.95rem; border-top:1px solid rgba(255,255,255,0.02); border-radius:8px; }
+
+  /* Modal */
+  .modal-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,0.6); display:none; align-items:center; justify-content:center; z-index:120 }
+  .modal{ width: min(720px,94%); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.25)); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.03) }
+  .form-row{ display:flex; gap:12px; margin-top:10px; align-items:center; flex-wrap:wrap }
+  .input{ flex:1; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.03); background:transparent; color:inherit }
+  .close{ background:transparent; border:0; font-size:1.1rem; color:var(--muted); cursor:pointer }
+
+  /* Small helpers */
+  .muted{ color:var(--muted) }
+  .small{ font-size:0.86rem }
+  .kb{ font-weight:800; color:#dfffe7 }
+
+  /* subtle animated lines */
+  .float-lines{ position:absolute; inset:auto 0 0 0; height:220px; pointer-events:none; opacity:0.06; }
+  .float-lines svg{ width:100%; height:100% }
+
+  /* Accessibility focus */
+  button:focus, a:focus, input:focus { outline: 3px solid rgba(0,255,106,0.12); outline-offset:2px; border-radius:8px }
 </style>
 </head>
-<body><div class="hero">
-  <h1>Aqronix VPS</h1>
-  <div class="tag">Premium Cloud Servers for Elite Performance</div>
-  <button class="btn" onclick="scrollToPlans()">View Plans</button>
-</div><section class="plans" id="plans">
-  <h2 style="text-align:center; font-size:2.5rem; margin-bottom:35px; text-shadow:0 0 15px #0f0;">Our Plans</h2>  <div class="grid" id="plansContainer"></div>
-</section><footer>© 2025 Aqronix. All Rights Reserved.</footer><script>
-  const plans = [
-    { ram:"2GB RAM", egp:50 },
-    { ram:"4GB RAM", egp:90 },
-    { ram:"6GB RAM", egp:130 },
-    { ram:"8GB RAM", egp:160 },
-    { ram:"16GB RAM", egp:300 },
-    { ram:"32GB RAM", egp:400 }
+<body>
+
+<!-- Header brand -->
+<header>
+  <div class="brand" role="banner" aria-label="Aqronix">
+    <div class="logo-mark" aria-hidden="true">AQ</div>
+    <div>
+      <h1 style="font-size:0.98rem">Aqronix</h1>
+      <p style="margin-top:4px">Global Cloud • سيرفرات سحابية فاخرة</p>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-grid panel" role="region" aria-label="Hero">
+      <div>
+        <div class="ribbon">Enterprise • أداء مضمّن</div>
+        <h2 class="hero-title">سيرفرات سحابية بامتياز — أداء لا يقارن</h2>
+        <p class="hero-sub">خوادم مُدارة، شبكات فائقة، حماية DDoS، ووقت تشغيل 99.99%. خطط مرنة للمطورين، الشركات، والأفراد المميزين.</p>
+
+        <div class="badges" aria-hidden="false">
+          <div class="badge">CPU 3.8GHz+</div>
+          <div class="badge">NVMe SSD</div>
+          <div class="badge">IPv4 & IPv6</div>
+          <div class="badge">مركز بيانات عالمي</div>
+        </div>
+
+        <div style="margin-top:22px; display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+          <button class="btn btn-primary" onclick="scrollToPlans()" aria-label="عرض الباقات">عرض الباقات</button>
+          <button class="btn btn-ghost" onclick="openModal('contact')" aria-label="اتصل الآن">اتصل عبر واتساب</button>
+        </div>
+
+        <div style="margin-top:22px; color:var(--muted); font-size:0.95rem">
+          <strong>مقرّنا:</strong> مراكز بيانات في أوروبا، أمريكا، والشرق الأوسط &nbsp;•&nbsp; دعم 24/7
+        </div>
+      </div>
+
+      <aside class="server-card" aria-label="خلاصة الخادم">
+        <div class="server-top">
+          <div>
+            <div class="server-name">Aqronix Edge X</div>
+            <div class="status small muted">مُحسّن للأداء العالي • موقع: أوروبا</div>
+          </div>
+          <div style="text-align:left">
+            <div style="font-weight:800; font-size:1.1rem" class="kb">Up to 10Gbps</div>
+            <div class="muted small">Traffic burst</div>
+          </div>
+        </div>
+
+        <div class="specs">
+          <div class="spec">2 vCPU</div>
+          <div class="spec">4GB RAM</div>
+          <div class="spec">80GB NVMe</div>
+          <div class="spec">1 IPv4</div>
+        </div>
+
+        <div style="margin-top:14px">
+          <div style="font-size:0.9rem; color:var(--muted)">ابحث عن السيرفر الأمثل حسب الاستخدام:</div>
+          <div style="display:flex; gap:8px; margin-top:10px">
+            <select id="regionSelect" class="input" style="max-width:190px">
+              <option value="eu">أوروبا (DE)</option>
+              <option value="us">الولايات المتحدة (NY)</option>
+              <option value="eg">مصر (القاهرة)</option>
+            </select>
+            <button class="btn btn-primary" onclick="simulateProvision()">اختبر الآن</button>
+          </div>
+          <div id="provisionResult" class="muted small" style="margin-top:10px">---</div>
+        </div>
+      </aside>
+
+      <!-- decorative lines -->
+      <div class="float-lines" aria-hidden="true">
+        <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00ff6a"/><stop offset="1" stop-color="#00d0ff"/></linearGradient></defs>
+          <path d="M0,120 C200,40 400,200 600,120 C800,40 1000,200 1200,120 L1200 200 0 200 Z" fill="url(#g)"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section id="plans" class="plans" aria-labelledby="plans-heading">
+    <h3 id="plans-heading" style="font-size:1.6rem; margin-bottom:8px; color:var(--accent)">خططنا</h3>
+
+    <div class="panel">
+      <div class="controls" role="toolbar" aria-label="خيارات">
+        <div class="toggle" role="tablist" aria-label="عملة">
+          <button id="curEGP" class="active" onclick="setCurrency('EGP')">EGP</button>
+          <button id="curUSD" onclick="setCurrency('USD')">USD</button>
+        </div>
+
+        <div class="toggle" style="margin-right:8px;" aria-label="الفترة">
+          <button id="cycleMonthly" class="active" onclick="setCycle('monthly')">شهري</button>
+          <button id="cycleYearly" onclick="setCycle('yearly')">سنوي (خصم 15%)</button>
+        </div>
+
+        <div style="margin-right:auto; color:var(--muted); font-weight:600">ادفع بالعملات المحلية أو بالدولار</div>
+      </div>
+
+      <div class="grid" id="plansContainer" role="list" style="margin-top:18px">
+        <!-- JS populates -->
+      </div>
+
+      <div class="compare" aria-hidden="false">
+        <table>
+          <thead>
+            <tr>
+              <th>مقارنة الميزات</th>
+              <th>Basic</th>
+              <th>Pro</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>RAM</td><td>4GB</td><td>8GB</td><td>16GB+</td></tr>
+            <tr><td>CPU</td><td>2 vCPU</td><td>4 vCPU</td><td>8 vCPU</td></tr>
+            <tr><td>التخزين</td><td>80GB NVMe</td><td>160GB NVMe</td><td>1TB NVMe</td></tr>
+            <tr><td>الانترنت</td><td>1Gbps</td><td>5Gbps</td><td>10Gbps+</td></tr>
+            <tr><td>نسخ احتياطية</td><td>أسبوعي</td><td>يومي</td><td>نظامي & مخصص</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <div>© 2025 Aqronix — كل الحقوق محفوظة</div>
+      <div style="margin-top:8px" class="muted small">تصميم وبرمجة: فريق حمو • للمبيعات: <a href="https://wa.me/+201028085788" target="_blank" style="color:var(--accent); text-decoration:none">+20 102 808 5788</a></div>
+    </footer>
+  </section>
+</main>
+
+<!-- Modal (Order / Contact) -->
+<div id="modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal" role="document">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <div style="font-weight:800; font-size:1.1rem">طلب خطة / تواصل سريع</div>
+        <div class="muted small" style="margin-top:6px">املأ البيانات وسنرسل لك رسالة واتساب جاهزة</div>
+      </div>
+      <button class="close" onclick="closeModal()">✕</button>
+    </div>
+
+    <div class="form-row" style="margin-top:12px">
+      <input id="userName" class="input" placeholder="الاسم الكامل" />
+      <input id="userEmail" class="input" placeholder="البريد الإلكتروني (اختياري)" />
+    </div>
+    <div class="form-row">
+      <select id="selectPlan" class="input" style="max-width:240px">
+        <!-- populated by JS -->
+      </select>
+      <select id="selectRegion" class="input" style="max-width:160px">
+        <option value="EU">أوروبا</option>
+        <option value="US">الولايات المتحدة</option>
+        <option value="EG">مصر</option>
+      </select>
+    </div>
+
+    <div class="form-row" style="justify-content:space-between; margin-top:16px">
+      <div style="display:flex; gap:8px;">
+        <input id="qty" class="input" type="number" min="1" value="1" style="max-width:100px" />
+        <div style="align-self:center" class="muted small">كمية</div>
+      </div>
+
+      <div style="display:flex; gap:8px;">
+        <button class="btn btn-primary" onclick="sendWhatsAppOrder()">إرسال عبر واتساب</button>
+        <button class="btn btn-ghost" onclick="closeModal()">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /***** Data & State *****/
+  const PLANS = [
+    {id:'bsc', title:'Basic', ram:'4GB', cpu:'2 vCPU', storage:'80GB NVMe', egp:80},
+    {id:'pro', title:'Pro', ram:'8GB', cpu:'4 vCPU', storage:'160GB NVMe', egp:150},
+    {id:'ent', title:'Enterprise', ram:'16GB', cpu:'8 vCPU', storage:'500GB NVMe', egp:380},
+    // extra premium options
+    {id:'x1', title:'X-Performance', ram:'32GB', cpu:'12 vCPU', storage:'1TB NVMe', egp:720}
   ];
 
-  const usdRate = 0.033; // Dynamic feeling rate
+  let currency = 'EGP'; // or USD
+  let cycle = 'monthly'; // or yearly
+  let usdRate = 0.033; // approximate EGP -> USD (editable by admin)
+  let yearlyDiscount = 0.15;
 
-  const container = document.getElementById("plansContainer");
-  plans.forEach(p => {
-    const usd = (p.egp * usdRate + 0.3).toFixed(2);
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <h3 style="font-size:1.6rem; color:#0f0;">${p.ram}</h3>
-      <div class="price">${p.egp} EGP / Month</div>
-      <div class="price" style="color:#888;">≈ ${usd}$</div>
-      <a href="https://wa.me/+201028085788" target="_blank">
-        <button class="btn" style="margin-top:15px;">Order Now</button>
-      </a>
-    `;
-    container.appendChild(card);
+  const plansContainer = document.getElementById('plansContainer');
+
+  function formatPrice(egp){
+    const cycleMult = (cycle==='yearly') ? 12 * (1 - yearlyDiscount) : 1;
+    const egpTotal = Math.round(egp * cycleMult);
+    if(currency === 'EGP') return `${egpTotal.toLocaleString('ar-EG')} EGP/${cycle==='monthly'?'شهر':'سنة'}`;
+    const usd = (egpTotal * usdRate + 0.0).toFixed(2);
+    return `${usd} USD/${cycle==='monthly'?'month':'year'}`;
+  }
+
+  function renderPlans(){
+    plansContainer.innerHTML = '';
+    PLANS.forEach(p => {
+      const el = document.createElement('article');
+      el.className = 'card';
+      el.setAttribute('role','listitem');
+      el.innerHTML = `
+        ${p.id === 'ent' ? '<div class="ribbon" style="left:auto; right:18px;background:linear-gradient(90deg,#ffd166,#ff6b6b);">الأكثر مبيعاً</div>' : ''}
+        <h3>${p.title}</h3>
+        <div class="price">${formatPrice(p.egp)}</div>
+        <div class="sub">${p.ram} • ${p.cpu}</div>
+        <ul>
+          <li>تخزين: ${p.storage}</li>
+          <li>شبكة فائقة وسرعات عالية</li>
+          <li>حماية DDoS أساسية</li>
+        </ul>
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="openModal('${p.id}')">اطلب الآن</button>
+          <button class="btn btn-ghost" onclick="viewSpecs('${p.id}')">عرض التفاصيل</button>
+        </div>
+      `;
+      plansContainer.appendChild(el);
+    });
+    populateSelect();
+  }
+
+  function setCurrency(c){
+    currency = c;
+    document.getElementById('curEGP').classList.toggle('active', c==='EGP');
+    document.getElementById('curUSD').classList.toggle('active', c==='USD');
+    renderPlans();
+  }
+  function setCycle(c){
+    cycle = c;
+    document.getElementById('cycleMonthly').classList.toggle('active', c==='monthly');
+    document.getElementById('cycleYearly').classList.toggle('active', c==='yearly');
+    renderPlans();
+  }
+
+  function viewSpecs(id){
+    const p = PLANS.find(x=>x.id===id);
+    alert(`${p.title}\n\nRAM: ${p.ram}\nCPU: ${p.cpu}\nStorage: ${p.storage}\n\nالسعر: ${formatPrice(p.egp)}`);
+  }
+
+  /* Modal & WhatsApp */
+  const modal = document.getElementById('modal');
+  const selectPlan = document.getElementById('selectPlan');
+  const selectRegion = document.getElementById('selectRegion');
+
+  function populateSelect(){
+    selectPlan.innerHTML = '';
+    PLANS.forEach(p=>{
+      const opt = document.createElement('option');
+      opt.value = p.id;
+      opt.textContent = `${p.title} — ${p.ram} — ${formatPrice(p.egp)}`;
+      selectPlan.appendChild(opt);
+    });
+  }
+
+  function openModal(planId){
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden','false');
+    if(planId){
+      selectPlan.value = planId;
+    }
+  }
+  function closeModal(){
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden','true');
+  }
+
+  function sendWhatsAppOrder(){
+    const name = document.getElementById('userName').value || 'عميل';
+    const email = document.getElementById('userEmail').value || '';
+    const planId = selectPlan.value;
+    const qty = Number(document.getElementById('qty').value || 1);
+    const plan = PLANS.find(x=>x.id===planId);
+    const egpPer = (cycle==='monthly') ? plan.egp : Math.round(plan.egp * 12 * (1 - yearlyDiscount));
+    const totalEGP = egpPer * qty;
+    const total = (currency==='EGP') ? `${totalEGP.toLocaleString('ar-EG')} EGP` : `${(totalEGP*usdRate).toFixed(2)} USD`;
+
+    const msg = encodeURIComponent(
+      `مرحباً Aqronix 👋%0Aالاسم: ${name}%0Aالخطة: ${plan.title} - ${plan.ram}%0Aالمنطقة: ${selectRegion.value}%0Aالكمية: ${qty}%0Aالدفع: ${total}%0Aالبريد: ${email}%0A%0Aأرغب بإتمام الطلب وطلب تفاصيل الفاتورة.`
+    );
+    const wa = `https://wa.me/201028085788?text=${msg}`;
+    window.open(wa, '_blank');
+  }
+
+  /* small server simulate */
+  function simulateProvision(){
+    const region = document.getElementById('regionSelect').value;
+    const el = document.getElementById('provisionResult');
+    el.textContent = 'جاري التحضير...';
+    setTimeout(()=>{
+      const ips = {eu:'185.12.23.45', us:'67.210.23.11', eg:'196.43.12.8'};
+      el.textContent = `تم التحضير. عنوان IP: ${ips[region]} • الجاهزية خلال 30 ثانية.`;
+    }, 900);
+  }
+
+  /* Utilities */
+  function scrollToPlans(){ document.getElementById('plans').scrollIntoView({behavior:'smooth'}); }
+
+  // initial render
+  renderPlans();
+
+  // Allow opening modal via function name in buttons
+  window.openModal = openModal;
+  window.closeModal = closeModal;
+  window.scrollToPlans = scrollToPlans;
+  window.setCurrency = setCurrency;
+  window.setCycle = setCycle;
+  window.viewSpecs = viewSpecs;
+  window.simulateProvision = simulateProvision;
+  window.sendWhatsAppOrder = sendWhatsAppOrder;
+
+  // keyboard accessibility: Esc closes modal
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closeModal();
   });
 
-  function scrollToPlans(){ document.getElementById("plans").scrollIntoView({ behavior:"smooth" }); }
-</script></body>
+  // small local store: keep user currency preference
+  try{
+    const saved = localStorage.getItem('aq_currency');
+    if(saved) { currency = saved; setCurrency(currency); }
+    document.getElementById('curEGP').addEventListener('click', ()=> localStorage.setItem('aq_currency','EGP'));
+    document.getElementById('curUSD').addEventListener('click', ()=> localStorage.setItem('aq_currency','USD'));
+  }catch(e){ /* ignore */ }
+
+</script>
+</body>
 </html>

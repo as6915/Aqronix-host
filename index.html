@@ -19,56 +19,63 @@
 footer{text-align:center;padding:40px 0;color:#666;border-top:1px solid #0f0;margin-top:40px} </style>
 
 </head>
-<body>
-<header>
-  <h1>Aqronix</h1>
-  <nav>
-    <a href="#plans">الخطط</a>
-    <a href="#platform">المنصة</a>
-    <a href="#contact">تواصل</a>
-  </nav>
-</header><div class="hero">
-  <div class="hero-content">
-    <h1>Aqronix Cyber VPS</h1>
-    <div class="tag">خوادم نيونية فاخرة أداء شركات عالمية</div>
-    <button class="btn" onclick="scrollToPlans()">عرض الخطط</button>
-  </div>
-</div><section class="plans" id="plans">
-  <h2>خطط VPS الفاخرة</h2>
-  <div class="grid" id="plansContainer"></div>
-</section><section class="platform" id="platform">
-  <h2>منصة Aqronix الأصلية</h2>
-  <p>لو عايز منصة قوية بنفس الستايل شوف شغلنا الحقيقي</p>
-  <a href="https://dash.aqronix-host.site/login" target="_blank"><button class="btn">عرض المنصة</button></a>
-</section><section class="contact" id="contact">
-  <h2>تواصل معنا</h2>
-  <p>واتساب جاهز لأي طلب أو استفسار</p>
-  <a href="https://wa.me/+201028085788" target="_blank"><button class="btn">راسلنا الآن</button></a>
-</section><footer>© 2025 Aqronix. All Rights Reserved.</footer><script>
-  const plans = [
-    { icon:"ri-cpu-line", ram:"2GB RAM", egp:50, usd:1.55 },
-    { icon:"ri-cpu-fill", ram:"4GB RAM", egp:90, usd:2.75 },
-    { icon:"ri-server-line", ram:"6GB RAM", egp:130, usd:3.95 },
-    { icon:"ri-server-fill", ram:"8GB RAM", egp:160, usd:4.85 },
-    { icon:"ri-database-2-line", ram:"16GB RAM", egp:300, usd:8.05 },
-    { icon:"ri-database-2-fill", ram:"32GB RAM", egp:400, usd:10.55 }
-  ];
-
-  const container = document.getElementById("plansContainer");
-
-  plans.forEach(p => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <i class="${p.icon}"></i>
-      <h3>${p.ram}</h3>
-      <div class="price">${p.egp} EGP / شهر</div>
-      <div class="usd">≈ ${p.usd}$</div>
-      <a href="https://wa.me/+201028085788" target="_blank"><button class="btn">اطلب الآن</button></a>
-    `;
-    container.appendChild(card);
-  });
-
-  function scrollToPlans(){document.getElementById("plans").scrollIntoView({behavior:"smooth"})}
-</script></body>
+<body class="min-h-screen bg-gray-950 text-white">
+  <nav class="w-full bg-gray-900/70 backdrop-blur-md border-b border-gray-800 px-8 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="2" d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z"/></svg>
+      <span class="text-2xl font-semibold tracking-wide">Aqronix</span>
+    </div>
+    <div class="hidden md:flex gap-8 text-lg">
+      <a href="#features" class="hover:text-blue-400 transition">Features</a>
+      <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+      <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+    </div>
+    <a href="https://dash.aqronix-host.site/login" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 transition text-lg">Dashboard</a>
+  </nav>  <header class="w-full flex flex-col items-center text-center py-28 px-6">
+    <h1 class="text-5xl font-bold mb-6 leading-tight">Premium Hosting Solutions For Modern Businesses</h1>
+    <p class="text-xl text-gray-300 max-w-2xl mb-10">Aqronix provides ultra secure VPS servers, high availability hosting, and enterprise-grade cloud infrastructure built for speed scalability and performance.</p>
+    <a href="https://dash.aqronix-host.site/login" class="bg-blue-600 hover:bg-blue-500 px-7 py-3 rounded-2xl text-xl">Get Started</a>
+  </header>  <section id="features" class="px-8 py-24 grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+      <h3 class="text-2xl font-semibold mb-3">Fast Deployment</h3>
+      <p class="text-gray-400 text-lg">Deploy your VPS or platform in seconds with fully automated provisioning and instant activation.</p>
+    </div>
+    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+      <h3 class="text-2xl font-semibold mb-3">Enterprise Security</h3>
+      <p class="text-gray-400 text-lg">Protected with dedicated firewalls DDoS defense and layered security systems.</p>
+    </div>
+    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+      <h3 class="text-2xl font-semibold mb-3">Global Infrastructure</h3>
+      <p class="text-gray-400 text-lg">High availability servers across multiple global datacenter regions for maximum uptime.</p>
+    </div>
+  </section>  <section id="pricing" class="px-8 py-24 max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-10">Affordable Pricing</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-900 p-10 rounded-2xl border border-gray-800">
+        <h3 class="text-2xl font-semibold mb-3">Starter</h3>
+        <p class="text-4xl font-bold mb-4">5$<span class="text-lg text-gray-400">/mo</span></p>
+        <p class="text-gray-400 mb-6">Perfect for small projects and beginner platforms</p>
+        <a href="#" class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl text-lg">Choose Plan</a>
+      </div>
+      <div class="bg-gray-900 p-10 rounded-2xl border border-gray-800">
+        <h3 class="text-2xl font-semibold mb-3">Pro</h3>
+        <p class="text-4xl font-bold mb-4">12$<span class="text-lg text-gray-400">/mo</span></p>
+        <p class="text-gray-400 mb-6">Full hosting solutions for businesses and developers</p>
+        <a href="#" class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl text-lg">Choose Plan</a>
+      </div>
+      <div class="bg-gray-900 p-10 rounded-2xl border border-gray-800">
+        <h3 class="text-2xl font-semibold mb-3">Enterprise</h3>
+        <p class="text-4xl font-bold mb-4">25$<span class="text-lg text-gray-400">/mo</span></p>
+        <p class="text-gray-400 mb-6">Maximum performance and global infrastructure</p>
+        <a href="#" class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl text-lg">Choose Plan</a>
+      </div>
+    </div>
+  </section>  <section id="contact" class="px-8 py-24 max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6">Want a site like this?</h2>
+    <p class="text-xl text-gray-300 mb-10">Check the Aqronix platform or request a full custom platform built exactly like this</p>
+    <a href="https://dash.aqronix-host.site/login" class="bg-blue-600 hover:bg-blue-500 px-7 py-3 rounded-2xl text-xl">View My Platform</a>
+  </section>  <footer class="py-10 text-center text-gray-500 border-t border-gray-800">
+    Aqronix Hosting Platform All rights reserved
+  </footer>
+</body>
 </html>

@@ -1,45 +1,73 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
-<head>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aqronix Hosting</title>
+<title>Aqronix Premium Hosting</title>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 <style>
-body {margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0d0d0d;color:#fff}
-.hero {min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
-.title {font-size:48px;font-weight:700;background:linear-gradient(90deg,#4f9,#0ff,#4ff);-webkit-background-clip:text;color:transparent}
-.subtitle {font-size:20px;margin-top:10px;color:#bbb}
-.prices {margin-top:50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;width:90%;max-width:1200px}
-.card {background:#111;padding:25px;border-radius:20px;border:1px solid #222;transition:.3s}
-.card:hover {transform:translateY(-8px);border-color:#0ff;box-shadow:0 0 20px #0ff3}
-.card h3 {margin:0 0 10px;font-size:26px;color:#0ff}
-.card p {margin:5px 0;font-size:18px;color:#ccc}
-.btn {margin-top:40px;background:#0ff;color:#000;padding:15px 30px;border-radius:30px;font-size:20px;font-weight:700;text-decoration:none;transition:.3s}
-.btn:hover {background:#4ff}
-.footer {margin-top:60px;font-size:18px;color:#888}
-.platform-btn {margin-top:20px;background:#44f;color:#fff;padding:14px 28px;border-radius:30px;font-size:18px;font-weight:600;text-decoration:none;transition:.3s}
-.platform-btn:hover {background:#66f}
-</style>
+  body{margin:0;background:#020202;color:#fff;font-family:'Poppins',sans-serif;overflow-x:hidden}
+  header{position:fixed;top:0;left:0;width:100%;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);z-index:999;border-bottom:1px solid #0f0}
+  header h1{font-size:1.8rem;color:#0f0;letter-spacing:2px;text-shadow:0 0 15px #0f0}
+  header nav a{margin:0 15px;color:#bbb;font-size:1rem;text-decoration:none;transition:0.3s}
+  header nav a:hover{color:#0f0}.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:url('https://i.ibb.co/5Kw2m1K/green-grid2.jpg');background-size:cover;background-position:center;position:relative} .hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75)} .hero-content{position:relative;z-index:2;max-width:900px;padding:20px} .hero h1{font-size:4rem;margin-bottom:10px;color:#0f0;text-shadow:0 0 25px #0f0} .hero .tag{font-size:1.4rem;color:#ccc;margin-bottom:25px} .btn{padding:15px 45px;font-size:1.3rem;background:#0f0;color:#000;border:none;border-radius:12px;font-weight:bold;cursor:pointer;box-shadow:0 0 20px #0f0;transition:0.3s} .btn:hover{transform:scale(1.07);box-shadow:0 0 30px #0f0}
+
+.plans{padding:80px 20px;max-width:1300px;margin:auto} .plans h2{text-align:center;font-size:3rem;margin-bottom:50px;color:#0f0;text-shadow:0 0 20px #0f0} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px} .card{background:#0a0a0a;padding:30px;border-radius:18px;border:1px solid #0f0;box-shadow:0 0 25px #002500;transition:0.3s;position:relative;overflow:hidden} .card:hover{transform:translateY(-10px);box-shadow:0 0 35px #00ff00} .card i{font-size:3.2rem;color:#0f0;margin-bottom:15px} .card h3{font-size:1.8rem;margin-bottom:10px;color:#fff} .price{font-size:1.4rem;color:#0f0;font-weight:bold;margin:10px 0} .usd{color:#aaa;font-size:1.1rem}
+
+.platform{padding:90px 20px;text-align:center;background:#000;border-top:1px solid #0f0;box-shadow:0 0 40px #0f0 inset} .platform h2{font-size:3rem;margin-bottom:20px;color:#0f0;text-shadow:0 0 25px #0f0} .platform p{color:#ddd;font-size:1.3rem;margin-bottom:35px}
+
+footer{text-align:center;padding:40px 0;color:#666;margin-top:40px;border-top:1px solid #0f0} </style>
+
 </head>
 <body>
-<div class="hero">
-<div class="title">Aqronix Hosting</div>
-<div class="subtitle">تم توفير جميع المواصفات ضمان المده كامله دون انقطاع متوفر من شهر لشهرين</div><div class="prices">
-<div class="card"><h3>Ram 2GB</h3><p>50EGP → 1.55$</p></div>
-<div class="card"><h3>Ram 4GB</h3><p>90EGP → 2.75$</p></div>
-<div class="card"><h3>Ram 6GB</h3><p>130EGP → 3.95$</p></div>
-<div class="card"><h3>Ram 8GB</h3><p>160EGP → 4.85$</p></div>
-<div class="card"><h3>Ram 16GB</h3><p>300EGP → 8.05$</p></div>
-<div class="card"><h3>Ram 32GB</h3><p>400EGP → 10.55$</p></div>
-</div><a class="btn" href="https://wa.me/+201028085788" target="_blank">طلب حجز الآن</a> <a class="platform-btn" href="https://dash.aqronix-host.site/login" target="_blank">عرض منصتي</a>
+<header>
+  <h1>Aqronix Host</h1>
+  <nav>
+    <a href="#plans">الخطط</a>
+    <a href="#platform">المنصة</a>
+    <a href="https://wa.me/+201028085788" target="_blank">تواصل معنا</a>
+  </nav>
+</header><div class="hero">
+  <div class="hero-content">
+    <h1>Aqronix VPS</h1>
+    <div class="tag">استضافة عالمية وخوادم فاخرة بجودة شركات ضخمة</div>
+    <button class="btn" onclick="scrollToPlans()">عرض الخطط</button>
+  </div>
+</div><section class="plans" id="plans">
+  <h2>خطط VPS الاحترافية</h2>
+  <div class="grid" id="plansContainer"></div>
+</section><section class="platform" id="platform">
+  <h2>عايز منصه زي دي؟</h2>
+  <p>شوف منصتي الاحترافيه وشوف الشغل الاصلي</p>
+  <a href="https://dash.aqronix-host.site/login" target="_blank">
+    <button class="btn">عرض المنصة</button>
+  </a>
+</section><footer>© 2025 Aqronix. All Rights Reserved.</footer><script>
+  const plans = [
+    { icon:"ri-database-2-line", ram:"2GB RAM", egp:50, usd:1.55 },
+    { icon:"ri-database-line", ram:"4GB RAM", egp:90, usd:2.75 },
+    { icon:"ri-database-2-fill", ram:"6GB RAM", egp:130, usd:3.95 },
+    { icon:"ri-server-line", ram:"8GB RAM", egp:160, usd:4.85 },
+    { icon:"ri-server-fill", ram:"16GB RAM", egp:300, usd:8.05 },
+    { icon:"ri-hard-drive-3-line", ram:"32GB RAM", egp:400, usd:10.55 }
+  ];
 
-<div class="footer">Aqronix Hosting</div>
-</div>
-  <section class="platform" style="padding:70px 20px; text-align:center; background:#000; border-top:1px solid #0f0; box-shadow:0 0 40px #0f0 inset;">
-    <h2 style="font-size:2.8rem; color:#0f0; text-shadow:0 0 25px #0f0; margin-bottom:25px;">عايز منصه زي دي؟</h2>
-    <p style="color:#ccc; font-size:1.3rem; margin-bottom:30px;">شوف منصتي الاحترافيه وشوف الشغل الاصلي</p>
-    <a href="https://dash.aqronix-host.site/login" target="_blank">
-      <button style="padding:15px 40px; font-size:1.4rem; background:#0f0; color:#000; border:none; border-radius:10px; cursor:pointer; font-weight:bold; box-shadow:0 0 25px #0f0;">عرض المنصه</button>
-    </a>
-  </section>
-</body>
+  const container = document.getElementById("plansContainer");
+  plans.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <i class="${p.icon}"></i>
+      <h3>${p.ram}</h3>
+      <div class="price">${p.egp} EGP / شهر</div>
+      <div class="usd">≈ ${p.usd}$</div>
+      <a href="https://wa.me/+201028085788" target="_blank">
+        <button class="btn" style="margin-top:15px;">اطلب الآن</button>
+      </a>
+    `;
+    container.appendChild(card);
+  });
+
+  function scrollToPlans(){
+    document.getElementById("plans").scrollIntoView({ behavior:"smooth" });
+  }
+</script></body>
 </html>

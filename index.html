@@ -2,11 +2,11 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>Aqronix Host | Global Cloud VPS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aqronix Global Cloud</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -16,94 +16,82 @@
 --text:#e5e7eb;
 --muted:#94a3b8;
 --main:#22c55e;
+--accent:#38bdf8;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
-body{background:radial-gradient(circle at top,#020617,#020617);color:var(--text)}
-.container{width:1300px;max-width:95%;margin:auto}
+body{background:linear-gradient(180deg,#020617,#020617);color:var(--text)}
+.container{max-width:1400px;margin:auto;padding:20px}
 
-/* NAV */
+/* ================= NAV ================= */
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 0
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 0;flex-wrap:wrap
 }
-.logo{
-font-size:28px;font-weight:900
-}
-.logo i{color:var(--main);margin-left:10px}
+.logo{font-size:28px;font-weight:900}
+.logo i{color:var(--main);margin-left:8px}
 nav ul{display:flex;gap:30px;list-style:none}
 nav ul li{color:var(--muted);cursor:pointer}
 nav ul li:hover{color:white}
+.cart-btn{
+background:var(--main);color:black;
+padding:10px 18px;border-radius:10px;
+font-weight:800;cursor:pointer
+}
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
-padding:120px 0;
-text-align:center
+padding:120px 0;text-align:center
 }
 .hero h1{
-font-size:54px;
-font-weight:900;
-line-height:1.3
+font-size:clamp(36px,6vw,64px);
+font-weight:900;line-height:1.2
 }
 .hero span{color:var(--main)}
 .hero p{
-margin-top:20px;
-font-size:18px;
-color:var(--muted)
+margin-top:20px;font-size:18px;color:var(--muted)
 }
-.hero button{
+.hero .cta{
 margin-top:40px;
-background:var(--main);
-border:none;
-padding:18px 45px;
-font-size:20px;
-font-weight:900;
-border-radius:14px;
+background:linear-gradient(135deg,var(--main),var(--accent));
+border:none;padding:18px 50px;
+border-radius:16px;font-size:20px;font-weight:900;
 cursor:pointer
 }
 
-/* STATS */
+/* ================= STATS ================= */
 .stats{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-margin-top:80px
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;margin-top:80px
 }
 .stat{
 background:var(--card);
 border:1px solid var(--border);
 border-radius:20px;
-padding:30px;
-text-align:center
+padding:30px;text-align:center
 }
-.stat i{
-font-size:36px;
-color:var(--main);
-margin-bottom:10px
-}
-.stat h2{font-size:32px}
+.stat i{font-size:34px;color:var(--main)}
+.stat h2{font-size:32px;margin-top:10px}
 
-/* VPS CONFIG */
+/* ================= SECTIONS ================= */
 .section{margin:120px 0}
 .section h2{
-font-size:38px;
-margin-bottom:15px
+font-size:42px;font-weight:900;margin-bottom:15px
 }
 .section p{color:var(--muted)}
 
+/* ================= VPS CONFIG ================= */
 .config{
 margin-top:50px;
 background:var(--card);
 border:1px solid var(--border);
-border-radius:25px;
+border-radius:30px;
 padding:40px
 }
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:30px
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;margin-top:25px
 }
 .option{
 border:1px solid var(--border);
@@ -112,49 +100,71 @@ padding:25px;
 cursor:pointer;
 transition:.3s
 }
-.option i{font-size:30px;color:var(--main)}
-.option h3{margin-top:10px}
+.option i{font-size:28px;color:var(--main)}
 .option.active,.option:hover{
 border-color:var(--main);
-box-shadow:0 0 25px rgba(34,197,94,.25)
+box-shadow:0 0 30px rgba(34,197,94,.25)
 }
 
-/* PRICE */
+/* ================= SUMMARY ================= */
 .summary{
 margin-top:40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:20px
+display:flex;justify-content:space-between;
+align-items:center;flex-wrap:wrap;gap:20px
 }
-.total{
-font-size:36px;
-font-weight:900
+.total{font-size:36px;font-weight:900}
+button.primary{
+background:var(--main);border:none;
+padding:16px 40px;border-radius:14px;
+font-size:18px;font-weight:900;cursor:pointer
 }
 
-/* FEATURES */
+/* ================= FEATURES ================= */
 .features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:60px
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;margin-top:60px
 }
 .feature{
 background:var(--card);
 border:1px solid var(--border);
-border-radius:20px;
+border-radius:22px;
 padding:30px
 }
-.feature i{font-size:32px;color:var(--main)}
-.feature h3{margin-top:10px}
+.feature i{font-size:34px;color:var(--main)}
+.feature h3{margin-top:15px}
 
-/* FOOTER */
+/* ================= CART ================= */
+.cart{
+position:fixed;top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,.7);
+display:none;justify-content:center;align-items:center
+}
+.cart-box{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:25px;
+width:100%;max-width:480px;
+padding:30px
+}
+.cart-item{
+border:1px solid var(--border);
+border-radius:15px;
+padding:15px;margin-top:15px
+}
+.whatsapp{
+width:100%;margin-top:20px;
+background:#25D366;color:black;
+padding:16px;border-radius:14px;
+font-size:18px;font-weight:900;border:none
+}
+
+/* ================= FOOTER ================= */
 footer{
+margin-top:120px;
 border-top:1px solid var(--border);
-padding:40px 0;
-margin-top:100px;
-text-align:center;
+padding:50px 0;text-align:center;
 color:var(--muted)
 }
 </style>
@@ -165,100 +175,133 @@ color:var(--muted)
 <div class="container">
 
 <nav>
-<div class="logo"><i class="fa-solid fa-cloud"></i>Aqronix Host</div>
+<div class="logo"><i class="fa-solid fa-cloud"></i>Aqronix</div>
 <ul>
-<li>Cloud</li>
-<li>VPS</li>
-<li>Pricing</li>
-<li>Security</li>
-<li>Contact</li>
+<li>Cloud</li><li>VPS</li><li>Security</li><li>Pricing</li><li>Contact</li>
 </ul>
+<div class="cart-btn" onclick="openCart()">
+<i class="fa-solid fa-cart-shopping"></i> Cart
+</div>
 </nav>
 
 <section class="hero">
-<h1>منصة <span>Cloud عالمية</span><br> لأداء بدون حدود</h1>
-<p>سيرفرات فائقة السرعة – أمان متقدم – تحكم كامل</p>
-<button>ابدأ الآن</button>
+<h1>Global <span>Cloud Infrastructure</span><br>Built For Scale</h1>
+<p>أداء فائق – أمان مؤسسي – تحكم كامل</p>
+<button class="cta">Launch Server</button>
 
 <div class="stats">
-<div class="stat"><i class="fa-solid fa-globe"></i><h2>15+</h2><p>Data Centers</p></div>
-<div class="stat"><i class="fa-solid fa-users"></i><h2>50K+</h2><p>Customers</p></div>
-<div class="stat"><i class="fa-solid fa-shield-halved"></i><h2>99.99%</h2><p>Uptime</p></div>
-<div class="stat"><i class="fa-solid fa-bolt"></i><h2>Ultra</h2><p>Performance</p></div>
+<div class="stat"><i class="fa-solid fa-globe"></i><h2>20+</h2><p>Datacenters</p></div>
+<div class="stat"><i class="fa-solid fa-users"></i><h2>120K+</h2><p>Clients</p></div>
+<div class="stat"><i class="fa-solid fa-shield-halved"></i><h2>99.99%</h2><p>SLA</p></div>
+<div class="stat"><i class="fa-solid fa-bolt"></i><h2>NVMe</h2><p>Ultra Speed</p></div>
 </div>
 </section>
 
 <section class="section">
-<h2>Configure Your VPS</h2>
-<p>خصّص السيرفر حسب احتياجك</p>
+<h2>Configure Enterprise VPS</h2>
+<p>مرونة كاملة تناسب كل المشاريع</p>
 
 <div class="config">
 
-<h3><i class="fa-solid fa-memory"></i> RAM</h3>
+<h3>RAM</h3>
 <div class="grid" id="ram">
-<div class="option" data-price="60"><h3>2 GB</h3></div>
-<div class="option" data-price="90"><h3>4 GB</h3></div>
-<div class="option" data-price="150"><h3>8 GB</h3></div>
+<div class="option" data-label="4GB RAM" data-price="90">4GB</div>
+<div class="option" data-label="8GB RAM" data-price="150">8GB</div>
+<div class="option" data-label="16GB RAM" data-price="280">16GB</div>
 </div>
 
-<h3 style="margin-top:40px"><i class="fa-solid fa-microchip"></i> CPU</h3>
+<h3 style="margin-top:40px">CPU</h3>
 <div class="grid" id="cpu">
-<div class="option" data-price="0"><h3>2 Core</h3></div>
-<div class="option" data-price="70"><h3>4 Core</h3></div>
-<div class="option" data-price="140"><h3>6 Core</h3></div>
+<div class="option" data-label="4 Core CPU" data-price="70">4 Core</div>
+<div class="option" data-label="6 Core CPU" data-price="140">6 Core</div>
+<div class="option" data-label="8 Core CPU" data-price="220">8 Core</div>
 </div>
 
-<h3 style="margin-top:40px"><i class="fa-solid fa-hard-drive"></i> SSD</h3>
+<h3 style="margin-top:40px">SSD</h3>
 <div class="grid" id="ssd">
-<div class="option" data-price="0"><h3>40 GB</h3></div>
-<div class="option" data-price="40"><h3>80 GB</h3></div>
-<div class="option" data-price="70"><h3>100 GB</h3></div>
+<div class="option" data-label="80GB NVMe" data-price="40">80GB</div>
+<div class="option" data-label="160GB NVMe" data-price="80">160GB</div>
+<div class="option" data-label="320GB NVMe" data-price="140">320GB</div>
 </div>
 
 <div class="summary">
-<div class="total">السعر: <span id="total">0</span> EGP</div>
-<button>Deploy Server</button>
+<div class="total">Total: <span id="total">0</span> EGP</div>
+<button class="primary" onclick="addToCart()">Add To Cart</button>
 </div>
 
 </div>
 </section>
 
 <section class="section">
-<h2>Why Aqronix?</h2>
+<h2>Why Global Companies Choose Us</h2>
 <div class="features">
-<div class="feature"><i class="fa-solid fa-lock"></i><h3>Advanced Security</h3><p>حماية متعددة الطبقات</p></div>
-<div class="feature"><i class="fa-solid fa-rocket"></i><h3>Blazing Speed</h3><p>NVMe + 10Gbps</p></div>
-<div class="feature"><i class="fa-solid fa-headset"></i><h3>24/7 Support</h3><p>فريق محترف دائمًا</p></div>
+<div class="feature"><i class="fa-solid fa-lock"></i><h3>Enterprise Security</h3></div>
+<div class="feature"><i class="fa-solid fa-rocket"></i><h3>Extreme Performance</h3></div>
+<div class="feature"><i class="fa-solid fa-headset"></i><h3>24/7 Experts</h3></div>
 </div>
 </section>
 
 <footer>
-© 2025 Aqronix Host – Global Cloud Infrastructure
+© 2025 Aqronix Global Cloud – Enterprise Infrastructure
 </footer>
 
 </div>
 
+<div class="cart" id="cart">
+<div class="cart-box">
+<h2>🛒 Cart</h2>
+<div id="cartItems"></div>
+<button class="whatsapp" onclick="checkout()">
+<i class="fa-brands fa-whatsapp"></i> Pay via WhatsApp
+</button>
+<button class="primary" style="width:100%;margin-top:10px" onclick="closeCart()">Close</button>
+</div>
+</div>
+
 <script>
+let selections={},cart=[];
 function setup(id){
 document.querySelectorAll(`#${id} .option`).forEach(o=>{
 o.onclick=()=>{
 document.querySelectorAll(`#${id} .option`).forEach(x=>x.classList.remove("active"));
 o.classList.add("active");
-calc();
+selections[id]=o;calc();
 }
 });
 }
 function calc(){
-let total=0;
-document.querySelectorAll(".option.active").forEach(o=>{
-total+=parseInt(o.dataset.price);
-});
-document.getElementById("total").innerText=total;
+let t=0;
+Object.values(selections).forEach(o=>t+=parseInt(o.dataset.price));
+document.getElementById("total").innerText=t;
 }
-setup("ram");
-setup("cpu");
-setup("ssd");
+function addToCart(){
+if(Object.keys(selections).length<3)return alert("اختر جميع المواصفات");
+cart.push({
+items:Object.values(selections).map(o=>o.dataset.label),
+price:document.getElementById("total").innerText
+});
+alert("تمت الإضافة");
+}
+function openCart(){
+let box=document.getElementById("cartItems");
+box.innerHTML="";
+cart.forEach((o,i)=>{
+box.innerHTML+=`<div class="cart-item">
+<b>Order ${i+1}</b><br>${o.items.join("<br>")}<br>
+<b>${o.price} EGP</b></div>`;
+});
+document.getElementById("cart").style.display="flex";
+}
+function closeCart(){document.getElementById("cart").style.display="none"}
+function checkout(){
+let msg="Enterprise VPS Order:%0A";
+cart.forEach((o,i)=>{
+msg+=`Order ${i+1}:%0A${o.items.join(", ")}%0APrice: ${o.price} EGP%0A%0A`;
+});
+window.open(`https://wa.me/201028085788?text=${msg}`);
+}
+setup("ram");setup("cpu");setup("ssd");
 </script>
 
 </body>
-  </html>
+</html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aqronix Host</title>
+<title>Aqronix Host | Global VPS Hosting</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -17,25 +17,26 @@
 --muted:#9ca3af;
 --primary:#22c55e;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
-body{background:var(--bg);color:var(--text)}
-.container{max-width:1100px;margin:auto;padding:20px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1200px;margin:auto;padding:24px}
 
 /* NAV */
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 0
+padding:16px 0
 }
 .logo{
 font-size:20px;
-font-weight:800
+font-weight:800;
+letter-spacing:.3px
 }
 .logo i{
-font-size:16px;
+font-size:14px;
 color:var(--primary);
-margin-left:6px
+margin-right:6px
 }
 .support{
 font-size:13px;
@@ -44,23 +45,23 @@ color:var(--muted)
 
 /* HERO */
 .hero{
-padding:60px 0 40px;
+padding:70px 0 50px;
 text-align:center
 }
 .hero h1{
-font-size:clamp(26px,4vw,40px);
+font-size:clamp(28px,4vw,42px);
 font-weight:800
 }
 .hero p{
 margin-top:10px;
-font-size:14px;
+font-size:15px;
 color:var(--muted)
 }
 
 /* SECTION */
-.section{margin-top:70px}
+.section{margin-top:90px}
 .section h2{
-font-size:26px;
+font-size:28px;
 font-weight:800;
 margin-bottom:6px
 }
@@ -71,35 +72,35 @@ color:var(--muted)
 
 /* PLANS */
 .plans{
-margin-top:35px;
+margin-top:40px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px
 }
 .plan{
 background:var(--surface);
 border:1px solid var(--border);
 border-radius:14px;
-padding:22px
+padding:26px
 }
 .plan h3{
-font-size:16px;
+font-size:17px;
 font-weight:700
 }
 .price{
-font-size:26px;
+font-size:30px;
 font-weight:800;
 margin:14px 0
 }
 .features{
 list-style:none;
-font-size:13px;
+font-size:14px;
 color:var(--muted)
 }
 .features li{
-margin-bottom:6px;
+margin-bottom:8px;
 display:flex;
-gap:6px
+gap:8px
 }
 .features i{
 font-size:11px;
@@ -107,11 +108,11 @@ color:var(--primary);
 margin-top:4px
 }
 .plan button{
-margin-top:14px;
+margin-top:18px;
 width:100%;
 background:var(--primary);
 border:none;
-padding:10px;
+padding:11px;
 border-radius:10px;
 font-weight:700;
 cursor:pointer
@@ -123,7 +124,7 @@ margin-top:80px;
 background:var(--surface);
 border:1px solid var(--border);
 border-radius:16px;
-padding:25px
+padding:30px
 }
 .custom-title{
 display:flex;
@@ -131,15 +132,20 @@ align-items:center;
 gap:10px
 }
 .custom-title i{
-font-size:18px;
+font-size:16px;
 color:var(--primary)
 }
 .group{
-margin-top:20px
+margin-top:22px
+}
+.group h4{
+font-size:13px;
+color:var(--muted);
+margin-bottom:8px
 }
 .options{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
 gap:10px
 }
 .option{
@@ -152,14 +158,14 @@ cursor:pointer
 }
 .option.active{
 border-color:var(--primary);
-background:rgba(34,197,94,.05)
+background:rgba(34,197,94,.06)
 }
 .summary{
-margin-top:20px;
+margin-top:26px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:15px
+gap:14px
 }
 .total{
 font-size:22px;
@@ -168,9 +174,9 @@ font-weight:800
 
 /* FOOTER */
 footer{
-margin-top:90px;
+margin-top:110px;
 border-top:1px solid var(--border);
-padding:30px 0;
+padding:40px 0;
 text-align:center;
 font-size:12px;
 color:var(--muted)
@@ -184,17 +190,18 @@ color:var(--muted)
 
 <nav>
 <div class="logo"><i class="fa-solid fa-cloud"></i>Aqronix Host</div>
-<div class="support">دعم فني 24/7 واتساب</div>
+<div class="support">24/7 Technical Support • WhatsApp</div>
 </nav>
 
 <section class="hero">
-<h1>استضافة VPS نظيفة بمعايير عالمية</h1>
-<p>خطط واضحة • أسعار عادلة • بدون تعقيد</p>
+<h1>Clean. Honest. Global VPS Hosting.</h1>
+<p>Transparent pricing • Real resources • Enterprise-grade stability</p>
 </section>
 
+<!-- VPS PLANS -->
 <section class="section">
-<h2>خطط VPS</h2>
-<p>اختيار جاهز للمشاريع المختلفة</p>
+<h2>VPS Plans</h2>
+<p>Pre-configured servers based on real available resources</p>
 
 <div class="plans">
 
@@ -202,92 +209,122 @@ color:var(--muted)
 <h3>Basic</h3>
 <div class="price">60 EGP</div>
 <ul class="features">
-<li><i class="fa-solid fa-check"></i>2GB RAM</li>
-<li><i class="fa-solid fa-check"></i>2 Core CPU</li>
-<li><i class="fa-solid fa-check"></i>40GB SSD</li>
+<li><i class="fa-solid fa-check"></i>2 GB RAM</li>
+<li><i class="fa-solid fa-check"></i>2 vCPU</li>
+<li><i class="fa-solid fa-check"></i>40 GB SSD</li>
 </ul>
-<button onclick="order('Basic VPS - 60 EGP')">اطلب</button>
+<button onclick="order('Basic VPS – 60 EGP')">Order</button>
 </div>
 
 <div class="plan">
 <h3>Standard</h3>
 <div class="price">90 EGP</div>
 <ul class="features">
-<li><i class="fa-solid fa-check"></i>4GB RAM</li>
-<li><i class="fa-solid fa-check"></i>2 Core CPU</li>
-<li><i class="fa-solid fa-check"></i>40GB SSD</li>
+<li><i class="fa-solid fa-check"></i>4 GB RAM</li>
+<li><i class="fa-solid fa-check"></i>2 vCPU</li>
+<li><i class="fa-solid fa-check"></i>40 GB SSD</li>
 </ul>
-<button onclick="order('Standard VPS - 90 EGP')">اطلب</button>
+<button onclick="order('Standard VPS – 90 EGP')">Order</button>
 </div>
 
 <div class="plan">
-<h3>Pro</h3>
+<h3>Professional</h3>
 <div class="price">120 EGP</div>
 <ul class="features">
-<li><i class="fa-solid fa-check"></i>6GB RAM</li>
-<li><i class="fa-solid fa-check"></i>4 Core CPU</li>
-<li><i class="fa-solid fa-check"></i>60GB SSD</li>
+<li><i class="fa-solid fa-check"></i>6 GB RAM</li>
+<li><i class="fa-solid fa-check"></i>4 vCPU</li>
+<li><i class="fa-solid fa-check"></i>60 GB SSD</li>
 </ul>
-<button onclick="order('Pro VPS - 120 EGP')">اطلب</button>
+<button onclick="order('Professional VPS – 120 EGP')">Order</button>
 </div>
 
 <div class="plan">
-<h3>Ultra</h3>
+<h3>Advanced</h3>
 <div class="price">150 EGP</div>
 <ul class="features">
-<li><i class="fa-solid fa-check"></i>8GB RAM</li>
-<li><i class="fa-solid fa-check"></i>4 Core CPU</li>
-<li><i class="fa-solid fa-check"></i>80GB SSD</li>
+<li><i class="fa-solid fa-check"></i>8 GB RAM</li>
+<li><i class="fa-solid fa-check"></i>4 vCPU</li>
+<li><i class="fa-solid fa-check"></i>80 GB SSD</li>
 </ul>
-<button onclick="order('Ultra VPS - 150 EGP')">اطلب</button>
+<button onclick="order('Advanced VPS – 150 EGP')">Order</button>
+</div>
+
+<div class="plan">
+<h3>Business</h3>
+<div class="price">210 EGP</div>
+<ul class="features">
+<li><i class="fa-solid fa-check"></i>12 GB RAM</li>
+<li><i class="fa-solid fa-check"></i>6 vCPU</li>
+<li><i class="fa-solid fa-check"></i>80 GB SSD</li>
+</ul>
+<button onclick="order('Business VPS – 210 EGP')">Order</button>
+</div>
+
+<div class="plan">
+<h3>Enterprise</h3>
+<div class="price">280 EGP</div>
+<ul class="features">
+<li><i class="fa-solid fa-check"></i>16 GB RAM</li>
+<li><i class="fa-solid fa-check"></i>8 vCPU</li>
+<li><i class="fa-solid fa-check"></i>100 GB SSD</li>
+</ul>
+<button onclick="order('Enterprise VPS – 280 EGP')">Order</button>
 </div>
 
 </div>
 </section>
 
+<!-- CUSTOM SERVER -->
 <section class="section">
 <div class="custom">
 <div class="custom-title">
 <i class="fa-solid fa-server"></i>
-<h2>خادم مخصص</h2>
+<h2>Custom Dedicated Server</h2>
 </div>
-<p>صمّم السيرفر حسب احتياجك</p>
+<p>Build your server using available configurations only</p>
 
 <div class="group">
+<h4>RAM</h4>
 <div class="options" id="ram">
-<div class="option" data-price="60">2GB RAM</div>
-<div class="option" data-price="90">4GB RAM</div>
-<div class="option" data-price="120">6GB RAM</div>
-<div class="option" data-price="150">8GB RAM</div>
+<div class="option" data-price="60">2 GB</div>
+<div class="option" data-price="90">4 GB</div>
+<div class="option" data-price="120">6 GB</div>
+<div class="option" data-price="150">8 GB</div>
+<div class="option" data-price="210">12 GB</div>
+<div class="option" data-price="280">16 GB</div>
 </div>
 </div>
 
 <div class="group">
+<h4>CPU</h4>
 <div class="options" id="cpu">
-<div class="option" data-price="0">2 Core</div>
-<div class="option" data-price="70">4 Core</div>
-<div class="option" data-price="140">6 Core</div>
+<div class="option" data-price="0">2 vCPU</div>
+<div class="option" data-price="70">4 vCPU</div>
+<div class="option" data-price="140">6 vCPU</div>
+<div class="option" data-price="220">8 vCPU</div>
 </div>
 </div>
 
 <div class="group">
+<h4>Storage</h4>
 <div class="options" id="ssd">
-<div class="option" data-price="0">40GB SSD</div>
-<div class="option" data-price="20">60GB SSD</div>
-<div class="option" data-price="40">80GB SSD</div>
+<div class="option" data-price="0">40 GB SSD</div>
+<div class="option" data-price="20">60 GB SSD</div>
+<div class="option" data-price="40">80 GB SSD</div>
+<div class="option" data-price="70">100 GB SSD</div>
 </div>
 </div>
 
 <div class="summary">
-<div class="total">السعر: <span id="total">0</span> EGP</div>
-<button onclick="sendCustom()">اطلب الخادم</button>
+<div class="total">Total: <span id="total">0</span> EGP</div>
+<button onclick="sendCustom()">Order Custom Server</button>
 </div>
 
 </div>
 </section>
 
 <footer>
-© 2025 Aqronix Host
+© 2025 Aqronix Host — Transparent Global Hosting
 </footer>
 
 </div>
@@ -313,9 +350,12 @@ function order(text){
 window.open(`https://wa.me/201028085788?text=${encodeURIComponent(text)}`);
 }
 function sendCustom(){
-if(Object.keys(sel).length<3)return alert("اختر كل المواصفات");
+if(Object.keys(sel).length<3){
+alert("Please select RAM, CPU and Storage");
+return;
+}
 let t=document.getElementById("total").innerText;
-window.open(`https://wa.me/201028085788?text=طلب خادم مخصص - السعر ${t} EGP`);
+window.open(`https://wa.me/201028085788?text=Custom Dedicated Server Order – Total ${t} EGP`);
 }
 setup("ram");setup("cpu");setup("ssd");
 </script>

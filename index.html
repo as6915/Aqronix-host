@@ -3,154 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aqronix Cloud | Global Hosting</title>
+<title>Aqronix Host | Global Cloud</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
---bg:#020617;
---card:#020617;
---border:#1e293b;
---text:#e5e7eb;
---muted:#94a3b8;
---main:#22c55e;
---blue:#38bdf8;
+--bg:#0b1120;
+--surface:#111827;
+--border:#1f2937;
+--text:#f9fafb;
+--muted:#9ca3af;
+--primary:#22c55e;
+--accent:#38bdf8;
 }
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
-body{background:var(--bg);color:var(--text)}
-.container{max-width:1400px;margin:auto;padding:20px}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1200px;margin:auto;padding:20px}
 
 /* NAV */
 nav{
-display:flex;justify-content:space-between;align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 padding:20px 0
 }
-.logo{font-size:26px;font-weight:900}
-.logo i{color:var(--main);margin-left:8px}
-nav ul{display:flex;gap:25px;list-style:none}
-nav ul li{color:var(--muted);cursor:pointer}
-nav ul li:hover{color:white}
+.logo{
+font-size:22px;
+font-weight:800;
+letter-spacing:.3px
+}
+.logo i{
+color:var(--primary);
+font-size:18px;
+margin-left:6px
+}
+nav ul{
+display:flex;
+gap:28px;
+list-style:none;
+font-size:14px
+}
+nav ul li{
+color:var(--muted);
+cursor:pointer
+}
+nav ul li:hover{color:var(--text)}
+.support-btn{
+font-size:13px;
+border:1px solid var(--border);
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+color:var(--muted)
+}
 
 /* HERO */
 .hero{
-padding:100px 0;text-align:center
+padding:80px 0 60px;
+text-align:center
 }
 .hero h1{
-font-size:clamp(36px,6vw,60px);
-font-weight:900
+font-size:clamp(28px,4vw,44px);
+font-weight:800
 }
-.hero span{color:var(--main)}
-.hero p{margin-top:15px;color:var(--muted)}
+.hero p{
+margin-top:12px;
+color:var(--muted);
+font-size:15px
+}
 
-/* SECTIONS */
-.section{margin:100px 0}
+/* SECTION */
+.section{margin-top:90px}
 .section h2{
-font-size:38px;font-weight:900;margin-bottom:10px
+font-size:30px;
+font-weight:800;
+margin-bottom:8px
 }
-.section p{color:var(--muted)}
+.section p{
+color:var(--muted);
+font-size:14px
+}
 
 /* PLANS */
 .plans{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:50px
+gap:24px;
+margin-top:40px
 }
 .plan{
-background:var(--card);
+background:var(--surface);
 border:1px solid var(--border);
-border-radius:24px;
-padding:30px;
-position:relative
+border-radius:16px;
+padding:28px
 }
-.plan.popular{
-border-color:var(--main);
-box-shadow:0 0 40px rgba(34,197,94,.15)
+.plan h3{
+font-size:18px;
+font-weight:700
 }
-.badge{
-position:absolute;
-top:-12px;right:20px;
-background:var(--main);
-color:black;
-padding:6px 14px;
-border-radius:20px;
-font-weight:900;font-size:14px
-}
-.plan h3{font-size:22px}
 .plan .price{
-font-size:36px;font-weight:900;margin:20px 0
+font-size:28px;
+font-weight:800;
+margin:14px 0
 }
 .plan ul{
-list-style:none;margin:20px 0;color:var(--muted)
+list-style:none;
+font-size:14px;
+color:var(--muted)
 }
 .plan ul li{
-margin-bottom:10px;
-display:flex;gap:10px
+margin-bottom:8px;
+display:flex;
+gap:8px
+}
+.plan ul i{
+font-size:12px;
+color:var(--primary);
+margin-top:4px
 }
 .plan button{
+margin-top:20px;
 width:100%;
-background:var(--main);
 border:none;
-padding:14px;
-border-radius:14px;
-font-weight:900;
+background:var(--primary);
+padding:10px;
+border-radius:10px;
+font-weight:700;
 cursor:pointer
 }
 
-/* CONFIGURATOR */
+/* CUSTOM SERVER */
 .config{
-margin-top:60px;
-background:var(--card);
+margin-top:40px;
+background:var(--surface);
 border:1px solid var(--border);
-border-radius:30px;
-padding:40px
+border-radius:18px;
+padding:30px
 }
-.grid{
+.group{
+margin-top:25px
+}
+.group h4{
+font-size:14px;
+margin-bottom:10px;
+color:var(--muted)
+}
+.options{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:20px
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:14px
 }
 .option{
 border:1px solid var(--border);
-border-radius:18px;
-padding:22px;
-cursor:pointer;
-transition:.3s
+border-radius:12px;
+padding:14px;
+font-size:13px;
+text-align:center;
+cursor:pointer
 }
-.option i{color:var(--main)}
-.option.active,.option:hover{
-border-color:var(--main);
-box-shadow:0 0 25px rgba(34,197,94,.25)
+.option.active{
+border-color:var(--primary);
+background:rgba(34,197,94,.05)
 }
-.summary{
-margin-top:40px;
-display:flex;justify-content:space-between;
-align-items:center;flex-wrap:wrap;gap:20px
-}
-.total{font-size:32px;font-weight:900}
 
-/* CART BUTTON SMALL */
-.cart-btn{
-position:fixed;
-bottom:25px;left:25px;
-background:var(--main);
-color:black;
-padding:14px 18px;
-border-radius:50px;
-font-weight:900;
-cursor:pointer;
-box-shadow:0 10px 30px rgba(34,197,94,.4)
+/* SUMMARY */
+.summary{
+margin-top:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:15px
+}
+.total{
+font-size:24px;
+font-weight:800
+}
+
+/* SUPPORT */
+.support{
+margin-top:90px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px
+}
+.support-box{
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:16px;
+padding:26px
+}
+.support-box i{
+font-size:16px;
+color:var(--accent)
+}
+.support-box h4{
+margin-top:10px;
+font-size:16px
+}
+.support-box p{
+font-size:14px;
+color:var(--muted);
+margin-top:6px
 }
 
 /* FOOTER */
 footer{
 margin-top:120px;
 border-top:1px solid var(--border);
-padding:50px 0;
+padding:40px 0;
 text-align:center;
+font-size:13px;
 color:var(--muted)
 }
 </style>
@@ -161,89 +227,95 @@ color:var(--muted)
 <div class="container">
 
 <nav>
-<div class="logo"><i class="fa-solid fa-cloud"></i>Aqronix Cloud</div>
+<div class="logo"><i class="fa-solid fa-cloud"></i>Aqronix Host</div>
 <ul>
-<li>Hosting</li>
 <li>VPS</li>
 <li>Dedicated</li>
 <li>Pricing</li>
 <li>Support</li>
 </ul>
+<div class="support-btn">24/7 Support</div>
 </nav>
 
 <section class="hero">
-<h1>استضافة <span>عالمية</span> بدون تنازل</h1>
-<p>خطط جاهزة أو خادم مخصص بإمكانياتك</p>
+<h1>استضافة احترافية بمعايير عالمية</h1>
+<p>خطط واضحة – أسعار عادلة – دعم فني حقيقي</p>
 </section>
 
 <!-- PLANS -->
 <section class="section">
 <h2>خطط VPS الجاهزة</h2>
-<p>أفضل اختيار للمشاريع السريعة</p>
+<p>مناسبة للمواقع والتطبيقات الصغيرة والمتوسطة</p>
 
 <div class="plans">
 <div class="plan">
-<h3>Starter</h3>
-<div class="price">90 EGP</div>
+<h3>Basic</h3>
+<div class="price">60 EGP</div>
 <ul>
-<li><i class="fa-solid fa-check"></i> 2GB RAM</li>
-<li><i class="fa-solid fa-check"></i> 2 Core CPU</li>
-<li><i class="fa-solid fa-check"></i> 40GB NVMe</li>
+<li><i class="fa-solid fa-check"></i>2GB RAM</li>
+<li><i class="fa-solid fa-check"></i>2 Core CPU</li>
+<li><i class="fa-solid fa-check"></i>40GB NVMe</li>
 </ul>
-<button onclick="sendPlan('Starter',90)">اطلب الآن</button>
-</div>
-
-<div class="plan popular">
-<div class="badge">الأكثر طلبًا</div>
-<h3>Business</h3>
-<div class="price">150 EGP</div>
-<ul>
-<li><i class="fa-solid fa-check"></i> 4GB RAM</li>
-<li><i class="fa-solid fa-check"></i> 4 Core CPU</li>
-<li><i class="fa-solid fa-check"></i> 80GB NVMe</li>
-</ul>
-<button onclick="sendPlan('Business',150)">اطلب الآن</button>
+<button onclick="order('Basic VPS - 60 EGP')">اطلب</button>
 </div>
 
 <div class="plan">
-<h3>Enterprise</h3>
-<div class="price">280 EGP</div>
+<h3>Standard</h3>
+<div class="price">90 EGP</div>
 <ul>
-<li><i class="fa-solid fa-check"></i> 8GB RAM</li>
-<li><i class="fa-solid fa-check"></i> 8 Core CPU</li>
-<li><i class="fa-solid fa-check"></i> 160GB NVMe</li>
+<li><i class="fa-solid fa-check"></i>4GB RAM</li>
+<li><i class="fa-solid fa-check"></i>2 Core CPU</li>
+<li><i class="fa-solid fa-check"></i>40GB NVMe</li>
 </ul>
-<button onclick="sendPlan('Enterprise',280)">اطلب الآن</button>
+<button onclick="order('Standard VPS - 90 EGP')">اطلب</button>
+</div>
+
+<div class="plan">
+<h3>Advanced</h3>
+<div class="price">150 EGP</div>
+<ul>
+<li><i class="fa-solid fa-check"></i>8GB RAM</li>
+<li><i class="fa-solid fa-check"></i>4 Core CPU</li>
+<li><i class="fa-solid fa-check"></i>80GB NVMe</li>
+</ul>
+<button onclick="order('Advanced VPS - 150 EGP')">اطلب</button>
 </div>
 </div>
 </section>
 
 <!-- CUSTOM -->
 <section class="section">
-<h2>خادم مخصص (Dedicated)</h2>
-<p>صمّم السيرفر بنفسك واحصل على السعر فورًا</p>
+<h2>خادم مخصص</h2>
+<p>حدّد الإمكانيات بنفسك واحصل على السعر فورًا</p>
 
 <div class="config">
 
-<h3>RAM</h3>
-<div class="grid" id="ram">
+<div class="group">
+<h4>RAM</h4>
+<div class="options" id="ram">
 <div class="option" data-price="60">2GB</div>
 <div class="option" data-price="90">4GB</div>
+<div class="option" data-price="120">6GB</div>
 <div class="option" data-price="150">8GB</div>
 </div>
+</div>
 
-<h3 style="margin-top:30px">CPU</h3>
-<div class="grid" id="cpu">
+<div class="group">
+<h4>CPU</h4>
+<div class="options" id="cpu">
 <div class="option" data-price="0">2 Core</div>
 <div class="option" data-price="70">4 Core</div>
 <div class="option" data-price="140">6 Core</div>
 </div>
+</div>
 
-<h3 style="margin-top:30px">Storage</h3>
-<div class="grid" id="ssd">
-<div class="option" data-price="0">40GB NVMe</div>
-<div class="option" data-price="40">80GB NVMe</div>
-<div class="option" data-price="70">100GB NVMe</div>
+<div class="group">
+<h4>Storage</h4>
+<div class="options" id="ssd">
+<div class="option" data-price="0">40GB</div>
+<div class="option" data-price="20">60GB</div>
+<div class="option" data-price="40">80GB</div>
+</div>
 </div>
 
 <div class="summary">
@@ -254,19 +326,38 @@ color:var(--muted)
 </div>
 </section>
 
+<!-- SUPPORT -->
+<section class="section">
+<h2>الدعم الفني</h2>
+<p>فريق تقني متواجد دائمًا لمساعدتك</p>
+
+<div class="support">
+<div class="support-box">
+<i class="fa-solid fa-headset"></i>
+<h4>دعم فني مباشر</h4>
+<p>متاح 24/7 عبر واتساب</p>
+</div>
+<div class="support-box">
+<i class="fa-solid fa-ticket"></i>
+<h4>نظام تذاكر</h4>
+<p>حل المشاكل التقنية بسرعة</p>
+</div>
+<div class="support-box">
+<i class="fa-solid fa-shield"></i>
+<h4>مراقبة السيرفرات</h4>
+<p>متابعة مستمرة للأداء</p>
+</div>
+</div>
+</section>
+
 <footer>
-© 2025 Aqronix Cloud — Competing Global Providers
+© 2025 Aqronix Host — Global Hosting Solutions
 </footer>
 
 </div>
 
-<div class="cart-btn" onclick="alert('السلة مبسطة — كل طلب يروح واتساب مباشرة')">
-<i class="fa-brands fa-whatsapp"></i>
-</div>
-
 <script>
 let sel={};
-
 function setup(id){
 document.querySelectorAll(`#${id} .option`).forEach(o=>{
 o.onclick=()=>{
@@ -282,13 +373,13 @@ let t=0;
 Object.values(sel).forEach(v=>t+=v);
 document.getElementById("total").innerText=t;
 }
-function sendPlan(name,price){
-window.open(`https://wa.me/201028085788?text=طلب خطة VPS:%0A${name}%0Aالسعر: ${price} EGP`);
+function order(text){
+window.open(`https://wa.me/201028085788?text=${encodeURIComponent(text)}`);
 }
 function sendCustom(){
 if(Object.keys(sel).length<3)return alert("اختر كل المواصفات");
 let t=document.getElementById("total").innerText;
-window.open(`https://wa.me/201028085788?text=طلب خادم مخصص:%0Aالسعر: ${t} EGP`);
+window.open(`https://wa.me/201028085788?text=طلب خادم مخصص - السعر ${t} EGP`);
 }
 setup("ram");setup("cpu");setup("ssd");
 </script>
